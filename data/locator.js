@@ -9,7 +9,8 @@ module.exports = {
 
   globalHeader: {
     header: '.custom-header',
-    headerText: '.custom-header span'
+    headerText: '.custom-header span',
+    headerImage: '.custom-header span img'
   }
 
 };
