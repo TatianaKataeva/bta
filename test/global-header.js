@@ -5,7 +5,7 @@ const locator = require('../data/locator').globalHeader;
 describe('Global Header', function () {
 
   it('Header Title', function () {
-    browser.url('/Bug-Tracker');
+    browser.url('/');
     let title = browser.getText(locator.header);
     assert.equal(title, data.headerTitle, 'Header title is incorrect')
   });

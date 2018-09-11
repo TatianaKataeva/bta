@@ -2,6 +2,7 @@ module.exports = {
 
   client: {
     pageTitle: "Bug Tracker",
+    faviconLink: 'https://reactbugtracker.com/favicon.ico'
   },
 
   globalHeader: {

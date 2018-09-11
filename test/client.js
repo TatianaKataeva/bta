@@ -5,9 +5,14 @@ const locator = require('../data/locator').client;
 describe('Client', function () {
 
   it('Page Title', function () {
-    browser.url('/Bug-Tracker');
+    browser.url('/');
     let title = browser.getTitle();
     assert.equal(title, data.pageTitle, 'Title is incorrect');
+  });
+
+  it('Favicon exist', function () {
+    let favicon = browser.getAttribute(locator.favicon, 'href');
+    assert.equal(favicon, data.faviconLink, 'Favicon does NOT Exist');
   });
 
   it('Global Header Visible', function () {
