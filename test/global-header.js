@@ -25,4 +25,9 @@ describe('Global Header', function () {
     assert.equal(color, data.headerColor, 'Header color is incorrect')
   });
 
+  it('Header Color', function () {
+    let color = browser.getCssProperty(locator.header, 'background-color').value;
+    assert.equal(color, data.headerColor, 'Header color is incorrect')
+  });
+
 });
