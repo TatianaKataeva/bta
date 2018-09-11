@@ -1,11 +1,15 @@
 const assert = require('chai').assert;
 const data = require('../data/test.data').client;
 const locator = require('../data/locator').client;
+//const viewport = require('../data/viewport');
 
-describe('Client', function () {
+//for(let i in viewport){
+
+describe(`Client`, function () {
 
   it('Page Title', function () {
     browser.url('/');
+    //browser.setViewportSize(viewport[i]);
     let title = browser.getTitle();
     assert.equal(title, data.pageTitle, 'Title is incorrect');
   });
@@ -31,3 +35,5 @@ describe('Client', function () {
   });
 
 });
+
+//}
