@@ -10,7 +10,8 @@ exports.config = {
   // directory is where your package.json resides, so `wdio` will be called from there.
   //
   specs: [
-    './test/**/*.js'
+    './test/client.js',
+    './test/global-header.js'
   ],
   // Patterns to exclude.
   exclude: [
@@ -43,7 +44,7 @@ exports.config = {
       // maxInstances can get overwritten per capability. So if you have an in-house Selenium
       // grid with only 5 firefox instances available you can make sure that not more than
       // 5 instances get started at a time.
-      maxInstances: 5,
+      maxInstances: 1,
       //
       browserName: 'chrome'
     }
@@ -125,11 +126,11 @@ exports.config = {
   // Test reporter for stdout.
   // The only one supported by default is 'dot'
   // see also: http://webdriver.io/guide/reporters/dot.html
-  reporters: ['dot', 'spec', 'allure'],
+  reporters: ['dot', 'spec', 'mochawesome'],
   reporterOptions: {
-    allure: {
-      outputDir: 'allure-results'
-    }
+    reportFilename: 'report',
+    outputDir: 'reports',
+    quiet: true
   },
   //
   // Options to be passed to Mocha.
