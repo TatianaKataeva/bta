@@ -3,3 +3,6 @@ errorShots
 .idea
 .git
 allure-results
+allure-reports
+reports
+mochawesome-report
