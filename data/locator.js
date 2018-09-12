@@ -11,6 +11,12 @@ module.exports = {
     header: '.custom-header',
     headerText: '.custom-header span',
     headerImage: '.custom-header span img'
-  }
+  },
 
+  loginPage: {
+    email: '#email',
+    password: '#pass',
+    loginButton: '#login',
+    errorMessage: '.alert-danger'
+  }
 };
