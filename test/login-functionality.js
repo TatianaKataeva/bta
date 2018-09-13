@@ -6,7 +6,7 @@ describe('Login Functionality', function () {
 
     describe('Email Field', function () {
 
-        it('User can enter 1 symbol', function () {
+        it(`User can enter ${data.minLength} symbol`, function () {
             browser.url('/');
             browser.waitForVisible(locator.email,7000);
             browser.setValue(locator.email,'1'.repeat(data.minLength));
@@ -14,21 +14,21 @@ describe('Login Functionality', function () {
             assert.equal(input.length, data.minLength);
         });
 
-        it('User can enter 22 symbols', function () {
+        it(`User can enter ${data.midLength} symbols`, function () {
             browser.clearElement(locator.email);
             browser.setValue(locator.email,'a'.repeat(data.midLength));
             let input = browser.getValue(locator.email);
             assert.equal(input.length, data.midLength);
         });
 
-        it('User can enter 45 symbols', function () {
+        it(`User can enter ${data.maxLength} symbols`, function () {
             browser.clearElement(locator.email);
             browser.setValue(locator.email,'n'.repeat(data.maxLength));
             let input = browser.getValue(locator.email);
             assert.equal(input.length, data.maxLength);
         });
 
-        it('User can\'t enter 46 symbols', function () {
+        it(`User can\'t enter ${data.maxLength + 1} symbols`, function () {
             browser.clearElement(locator.email);
             browser.setValue(locator.email,'x'.repeat(data.maxLength + 1));
             let input = browser.getValue(locator.email);
