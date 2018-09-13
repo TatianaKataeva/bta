@@ -9,7 +9,7 @@ describe('Login Functionality', function () {
         it('User can enter 1 symbol', function () {
             browser.url('/');
             browser.waitForVisible(locator.email,7000);
-            browser.setValue(locator.email,'1');
+            browser.setValue(locator.email,'1'.repeat(data.minLength));
             let input = browser.getValue(locator.email);
             assert.equal(input.length, data.minLength);
         });
