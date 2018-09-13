@@ -6,7 +6,7 @@ describe('Login Functionality', function () {
 
     describe('Email Field', function () {
 
-        it(`User can enter ${data.minLength} symbol`, function () {
+        it(`User can enter ${data.minLength} symbol${data.minLength > 1 ? 's' : ''}`, function () {
             browser.url('/');
             browser.waitForVisible(locator.email,7000);
             browser.setValue(locator.email,'1'.repeat(data.minLength));
