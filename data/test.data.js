@@ -14,6 +14,19 @@ module.exports = {
     fontColor: "#212529",
     imageSize: "30x30",
     textAlign: "center"
-  }
+  },
 
+  loginPageFunctionality: {
+    minLength: 1,
+    midLength: 22,
+    maxLength: 45,
+    noLoginOrPassError: 'Specify email and password',
+    wrongLoginError: 'User with this email does not exist'
+  },
+
+  registrationPageFunctionality: {
+    minLength: 1,
+    maxLength: 20,
+    emptyFieldError: 'Please fill all the fields'
+  }
 };
