@@ -1,8 +1,8 @@
 exports.config = {
 
   specs: [
-    './test/client.js',
-    './test/global-header.js',
+    //'./test/client.js',
+    //'./test/global-header.js',
     './test/login-functionality.js'
   ],
 
