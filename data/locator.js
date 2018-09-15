@@ -19,6 +19,6 @@ module.exports = {
     loginButton: '#login',
     errorMessage: '.alert-danger',
     requiredText: '.text-sm-left',
-    registrationButton: '#registration',
+    registrationButton: '#registration'
   }
 };

@@ -20,9 +20,9 @@ module.exports = {
     emailPlaceholderText: "Email *",
     emailFieldFontSize: "16px",
     emailFieldFontWeight: "400",
-    emailFieldFontFamily: "sergoe ui",
+    emailFieldFontFamily: "segoe ui",
     emailFieldFontColor: "#495057",
-    emailFieldFocusColor: " #80bdff"
+    emailFieldFocusColor: "#80bdff",
   }
 
 };
