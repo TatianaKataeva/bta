@@ -17,7 +17,12 @@ module.exports = {
   },
 
   loginPage: {
-    emailPlaceholder: "Email *"
+    emailPlaceholderText: "Email *",
+    emailFieldFontSize: "16px",
+    emailFieldFontWeight: "400",
+    emailFieldFontFamily: "sergoe ui",
+    emailFieldFontColor: "#495057",
+    emailFieldFocusColor: " #80bdff"
   }
 
 };

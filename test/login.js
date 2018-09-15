@@ -40,13 +40,13 @@ describe('Elements present subsuite', function () {
 
         it('Email placeholder should be "Email *"', function () {
             let emailFieldPlaceholder = browser.getAttribute(locator.email,'placeholder');
-            assert.equal(emailFieldPlaceholder,data.emailPlaceholder, 'Email field placeholder is NOT correct')
+            assert.equal(emailFieldPlaceholder,data.emailPlaceholderText, 'Email field placeholder is NOT correct')
         });
-    // it('Header Font Size', function () {
-    //     let fontSize = browser.getCssProperty(locator.headerText, 'font-size').value;
-    //     assert.equal(fontSize, data.headerFontSize, 'Header Font Size is incorrect')
-    // });
-    //
+        it('Email field Font Size', function () {
+        let fontSize = browser.getCssProperty(locator.email, 'font-size').value;
+        assert.equal(fontSize, data.emailFieldFontSize, 'Email field Font Size is NOT correct')
+        });
+
     // it('Header Font Weight', function () {
     //     let fontWeight = browser.getCssProperty(locator.headerText, 'font-weight').value;
     //     assert.equal(fontWeight, data.fontWeight, 'Header Font Weight is incorrect')
