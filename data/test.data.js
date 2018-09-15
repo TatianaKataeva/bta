@@ -14,6 +14,10 @@ module.exports = {
     fontColor: "#212529",
     imageSize: "30x30",
     textAlign: "center"
+  },
+
+  loginPage: {
+    emailPlaceholder: "Email *"
   }
 
 };

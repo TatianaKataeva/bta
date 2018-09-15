@@ -1,8 +1,8 @@
 const assert = require('chai').assert;
-// const data = require('../data/test.data').globalHeader;
+const data = require('../data/test.data').loginPage;
 const locator = require('../data/locator').loginPage;
 
-describe('Elements present', function () {
+describe('Elements present subsuite', function () {
 
     it('Email field is visible', function () {
         browser.url('/');
@@ -30,6 +30,18 @@ describe('Elements present', function () {
         let registrationButton = browser.isVisible(locator.registrationButton);
         assert.isTrue(registrationButton, 'Registration button is NOT Visible');
     });
+});
+    describe('Email field subsuite', function () {
+
+        it('Email field should be empty', function () {
+        let emailFieldValue = browser.getValue(locator.email);
+        assert.equal(emailFieldValue,'', 'Email field is NOT empty')
+        });
+
+        it('Email placeholder should be "Email *"', function () {
+            let emailFieldPlaceholder = browser.getAttribute(locator.email,'placeholder');
+            assert.equal(emailFieldPlaceholder,data.emailPlaceholder, 'Email field placeholder is NOT correct')
+        });
     // it('Header Font Size', function () {
     //     let fontSize = browser.getCssProperty(locator.headerText, 'font-size').value;
     //     assert.equal(fontSize, data.headerFontSize, 'Header Font Size is incorrect')
