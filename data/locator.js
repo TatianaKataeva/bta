@@ -18,5 +18,13 @@ module.exports = {
     password: '#pass',
     loginButton: '#login',
     errorMessage: '.alert-danger'
+  },
+
+  bugReportEditMode: {
+    input: 'div .form-control:nth-child(4)',
+    allIssuesBtn: '#all_issues',
+    bugTitle: 'span.text-left=Register button has wrong text',
+    btn: '.btn-primary.btn-block',
+    txtArea: 'div :nth-child(8)'
   }
 };
