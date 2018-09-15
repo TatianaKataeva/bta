@@ -22,5 +22,11 @@ module.exports = {
     maxLength: 45,
     noLoginOrPassError: 'Specify email and password',
     wrongLoginError: 'User with this email does not exist'
+  },
+
+  registrationPageFunctionality: {
+    minLength: 1,
+    maxLength: 20,
+    emptyFieldError: 'Please fill all the fields'
   }
 };
