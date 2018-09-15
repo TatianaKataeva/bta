@@ -14,6 +14,16 @@ module.exports = {
     fontColor: "#212529",
     imageSize: "30x30",
     textAlign: "center"
-  }
+  },
+
+    loginFunctionality: {
+        errorDesignBackgroundColor: 'rgba(248,215,218,1)' ,
+        errorDesignBorderColor: 'rgb(245,198,203)',
+        errorDesignFontFamily: 'segoe ui',
+        errorDesignFontSize: '16px',
+        errorDesignFontWeight: '400',
+        errorDesignTextAlign: 'center',
+        errorDesignFontColor: 'rgba(114,28,36,1)'
+    }
 
 };

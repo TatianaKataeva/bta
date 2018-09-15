@@ -1,5 +1,6 @@
 const assert = require('chai').assert;
 const locator = require('../data/locator').loginPage;
+const data = require('../data/test.data').loginFunctionality;
 
 describe('Login Functionality', function () {
 
@@ -52,4 +53,43 @@ describe('Login Functionality', function () {
             assert.equal(error, 'User with this email does not exist');
         });
     });
+
+    describe ('Error design', function (){
+
+        it('Error design background Color', function () {
+            let backgroundColor = browser.getCssProperty(locator.errorMessage, 'background-color').value;
+            assert.equal(backgroundColor, data.errorDesignBackgroundColor, 'Error design background Color')
+        });
+
+        it('Error design border Color', function () {
+            let borderColor = browser.getCssProperty(locator.errorMessage, 'border-color').value;
+            assert.equal(borderColor, data.errorDesignBorderColor, 'Error design border color is incorrect')
+        });
+
+        it('Error design font family', function () {
+            let fontFamily = browser.getCssProperty(locator.errorMessage, 'font-family').value;
+            assert.equal(fontFamily, data.errorDesignFontFamily, 'Error design font family is incorrect')
+        });
+
+        it('Error design font size', function () {
+            let fontSize = browser.getCssProperty(locator.errorMessage, 'font-size').value;
+            assert.equal(fontSize, data.errorDesignFontSize, 'Error design font size is incorrect')
+        });
+
+        it('Error design font weight', function () {
+            let fontWeight = browser.getCssProperty(locator.errorMessage, 'font-weight').value;
+            assert.equal(fontWeight, data.errorDesignFontWeight, 'Error design font weight is incorrect')
+        });
+
+        it('Error design font color', function () {
+            let fontColor = browser.getCssProperty(locator.errorMessage, 'color').value;
+            assert.equal(fontColor, data.errorDesignFontColor, 'Error design font color is incorrect')
+        });
+
+        it('Error design text align', function () {
+            let textAlign = browser.getCssProperty(locator.errorMessage, 'text-align').value;
+            assert.equal(textAlign, data.errorDesignTextAlign, 'Error design text align is incorrect')
+        });
+    });
+
 });
