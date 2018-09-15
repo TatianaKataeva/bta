@@ -3,7 +3,8 @@ exports.config = {
   specs: [
     './test/client.js',
     './test/global-header.js',
-    './test/login-functionality.js'
+    './test/login-functionality.js',
+    './test/registration-functionality.js'
   ],
 
   exclude: [

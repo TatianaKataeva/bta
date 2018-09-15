@@ -17,6 +17,13 @@ module.exports = {
     email: '#email',
     password: '#pass',
     loginButton: '#login',
-    errorMessage: '.alert-danger'
+    errorMessage: '.alert-danger',
+    registrationButton: '#registration'
+  },
+
+  registrationPage : {
+    firstName: '#fname',
+    errorMessage: '.alert-danger',
+    registerButton: '#registration'
   }
 };
