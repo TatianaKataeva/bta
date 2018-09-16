@@ -23,6 +23,7 @@ module.exports = {
 
   registrationPage : {
     firstName: '#fname',
+    lastName: '#lname',
     errorMessage: '.alert-danger',
     registerButton: '#registration'
   }

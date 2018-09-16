@@ -25,8 +25,10 @@ module.exports = {
   },
 
   registrationPageFunctionality: {
-    minLength: 1,
-    maxLength: 20,
+    firstNameMinLength: 1,
+    firstNameMaxLength: 20,
+    lastNameMinLength: 1,
+    lastNameMaxLength: 20,
     emptyFieldError: 'Please fill all the fields'
   }
 };
