@@ -25,5 +25,10 @@ module.exports = {
     firstName: '#fname',
     errorMessage: '.alert-danger',
     registerButton: '#registration'
-  }
+  },
+
+    globalFooter: {
+        footer: '.custom-footer',
+        footerText: 'body .custom-footer',
+    }
 };

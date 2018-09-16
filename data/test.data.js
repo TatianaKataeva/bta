@@ -28,5 +28,14 @@ module.exports = {
     minLength: 1,
     maxLength: 20,
     emptyFieldError: 'Please fill all the fields'
-  }
+  },
+
+    globalFooter: {
+        footerTitle: new Date().getFullYear().toString() + " Bug Tracker by React Web Development",
+        footerColor: "rgba(0,0,0,0.125)",
+        footerFontSize: "16px",
+        fontWeight: "400",
+        fontFamily: "segoe ui",
+        fontColor: "#212529"
+    }
 };
