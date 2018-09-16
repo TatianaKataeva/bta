@@ -14,6 +14,10 @@ module.exports = {
     fontColor: "#212529",
     imageSize: "30x30",
     textAlign: "center"
+  },
+  user: {
+  email: 'tester@test.com',
+  password: 'test'
   }
 
 };
