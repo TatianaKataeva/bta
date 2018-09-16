@@ -22,6 +22,7 @@ module.exports = {
 
   bugReportEditMode: {
     input: 'div .form-control:nth-child(4)',
+    inputActRes: 'div .form-control:nth-child(4)',
     allIssuesBtn: '#all_issues',
     bugTitle: 'span.text-left=Register button has wrong text',
     btn: '.btn-primary.btn-block',

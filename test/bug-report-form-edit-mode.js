@@ -27,9 +27,9 @@ describe('bug-report-form-edit-mode', function () {
         assert.equal(fontFamily, data.fontFamily, 'Summary font family is incorrect');
     });
 
-    it(`font size is ${data.FontSize}`, function () {
+    it(`font size is ${data.fontSize}`, function () {
     let fontSize = browser.getCssProperty(locator.bugReportEditMode.input, 'font-size').value;
-    assert.equal(fontSize, data.FontSize, 'Summary font size is incorrect');
+    assert.equal(fontSize, data.fontSize, 'Summary font size is incorrect');
     });
 
     it(`font weight is ${data.fontWeight}`, function () {
@@ -37,14 +37,80 @@ describe('bug-report-form-edit-mode', function () {
     assert.equal(fontWeight, data.fontWeight, 'Summary font weight is incorrect');
     });
 
-    it(`font color is ${data.FontColor}`, function () {
+    it(`font color is ${data.fontColor}`, function () {
     let fontColor = browser.getCssProperty(locator.bugReportEditMode.input, 'color').value;
-    assert.equal(fontColor, data.FontColor, 'Summary color is incorrect');
+    assert.equal(fontColor, data.fontColor, 'Summary color is incorrect');
     });
 
-    it(`text is aligned to the ${data.TextAlign}`, function () {
+    it(`text is aligned to the ${data.textAlign}`, function () {
     let align = browser.getCssProperty(locator.bugReportEditMode.input, 'text-align').value;
-    assert.equal(align, data.TextAlign, 'Summary text is not aligned to the left')
+    assert.equal(align, data.textAlign, 'Summary text is not aligned to the left')
+    });
+  });
+
+  describe('Steps to reproduce', function () {
+
+    it('accept multiline input', function () {
+      let elType = browser.getTagName(locator.bugReportEditMode.txtArea);
+      assert.equal(elType, data.tagTextArea, 'Steps to reproduce is not accept multiline input');
+    });
+
+    it(`font family is ${data.fontFamily}`, function () {
+      let fontFamily = browser.getCssProperty(locator.bugReportEditMode.txtArea, 'font-family').value;
+      assert.equal(fontFamily, data.fontFamily, 'font family is incorrect');
+    });
+
+    it(`font size is ${data.fontSize}`, function () {
+      let fontSize = browser.getCssProperty(locator.bugReportEditMode.txtArea, 'font-size').value;
+      assert.equal(fontSize, data.fontSize, 'font size is incorrect');
+    });
+
+    it(`font weight is ${data.fontWeight}`, function () {
+      let fontWeight = browser.getCssProperty(locator.bugReportEditMode.txtArea, 'font-weight').value;
+      assert.equal(fontWeight, data.fontWeight, 'font weight is incorrect');
+    });
+
+    it(`font color is ${data.fontColor}`, function () {
+      let fontColor = browser.getCssProperty(locator.bugReportEditMode.txtArea, 'color').value;
+      assert.equal(fontColor, data.fontColor, 'color is incorrect');
+    });
+
+    it(`text is aligned to the ${data.textAlign}`, function () {
+      let align = browser.getCssProperty(locator.bugReportEditMode.txtArea, 'text-align').value;
+      assert.equal(align, data.textAlign, `text is not aligned to the ${data.textAlign}`);
+    });
+  });
+
+  describe('Actual Result', function () {
+
+    it('is a single line input field', function () {
+    let elType = browser.getTagName(locator.bugReportEditMode.inputActRes);
+    assert.equal(elType, data.tagInput, 'is not a single line input field');
+    });
+
+    it(`font family is ${data.fontFamily}`, function () {
+      let fontFamily = browser.getCssProperty(locator.bugReportEditMode.inputActRes, 'font-family').value;
+      assert.equal(fontFamily, data.fontFamily, 'font family is incorrect');
+    });
+
+    it(`font size is ${data.fontSize}`, function () {
+      let fontSize = browser.getCssProperty(locator.bugReportEditMode.inputActRes, 'font-size').value;
+      assert.equal(fontSize, data.fontSize, 'font size is incorrect');
+    });
+
+    it(`font weight is ${data.fontWeight}`, function () {
+      let fontWeight = browser.getCssProperty(locator.bugReportEditMode.inputActRes, 'font-weight').value;
+      assert.equal(fontWeight, data.fontWeight, 'font weight is incorrect');
+    });
+
+    it(`font color is ${data.fontColor}`, function () {
+      let fontColor = browser.getCssProperty(locator.bugReportEditMode.inputActRes, 'color').value;
+      assert.equal(fontColor, data.fontColor, 'color is incorrect');
+    });
+
+    it(`text is aligned to the ${data.textAlign}`, function () {
+      let align = browser.getCssProperty(locator.bugReportEditMode.inputActRes, 'text-align').value;
+      assert.equal(align, data.textAlign, `text is not aligned to the ${data.textAlign}`)
     });
   });
 });

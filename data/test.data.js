@@ -26,11 +26,11 @@ module.exports = {
 
   bugReportEditMode: {
     tagInput: 'input',
-    FontSize: '16px',
-    FontColor: 'rgba(73,80,87,1)',
-    TextAlign: 'start',
+    fontSize: '16px',
+    fontColor: 'rgba(73,80,87,1)',
+    textAlign: 'start',
     fontFamily: 'segoe ui',
     fontWeight: '400',
-    tagTextArea: 'testarea'
+    tagTextArea: 'textarea'
   }
 };
