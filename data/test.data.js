@@ -22,7 +22,7 @@ module.exports = {
     emailFieldFontWeight: "400",
     emailFieldFontFamily: "segoe ui",
     emailFieldFontColor: "#495057",
-    emailFieldFocusColor: "#80bdff",
+    emailFieldFocusColor: "#80bdff"
   }
 
 };

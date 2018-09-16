@@ -4,7 +4,7 @@ exports.config = {
     './test/client.js',
     './test/global-header.js',
     './test/login-functionality.js',
-      './test/login.js',
+    './test/login.js'
   ],
 
   exclude: [
