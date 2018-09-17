@@ -30,5 +30,20 @@ module.exports = {
     lastNameMinLength: 1,
     lastNameMaxLength: 20,
     emptyFieldError: 'Please fill all the fields'
+  },
+
+  bugReportDis: {
+    fontWeight: "700",
+    fontFamily: "Segoe UI",
+    fontSize: "16px",
+    fontColor: "#212529",
+    fontWeightValue: "400",
+    fontFamilyValue: "Segoe UI",
+    fontSizeValue: "16px",
+    fontColorValue: "#0000007d",
+    attachment: 'https://prnt.sc/kimt1t',
+    fontWeightAttach: "700",
+    fontFamilyAttach: "Segoe UI",
+    fontSizeAttach: "16px",
   }
 };

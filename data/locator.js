@@ -26,5 +26,24 @@ module.exports = {
     lastName: '#lname',
     errorMessage: '.alert-danger',
     registerButton: '#registration'
+  },
+
+  bugReportDis: {
+    titleFont: '.text-bold',
+    valueFont: '.text-grey',
+    valueFont2: '.text-area',
+    email: '#email',
+    password: '#pass',
+    loginButton: '#login',
+    allIssues: '#all_issues',
+    bugSummary: '.text-left',
+    chooseBug: 'span:nth-child(9)',
+    attachment: '0',
+
+
+
   }
+
+
+
 };
