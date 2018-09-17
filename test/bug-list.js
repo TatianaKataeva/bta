@@ -17,4 +17,17 @@ describe('Bug List Page', function () {
 
     });
 
+    it('Structure table has the Header', function () {
+        browser.waitForVisible(locator.bugList.bodyTable,3000);
+        let headerTableVisible = browser.isVisible(locator.bugList.headerTable);
+        assert.isTrue(headerTableVisible, 'Header table NOT Visible');
+
+    });
+
+    it('Structure table has the List of Bug-reports', function () {
+        let bodyTableVisible = browser.isVisible(locator.bugList.bodyTable);
+        assert.isTrue(bodyTableVisible, 'List of bugs NOT Visible');
+
+    });
+
 });

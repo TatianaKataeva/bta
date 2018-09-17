@@ -45,7 +45,8 @@ module.exports = {
     bugList: {
         bodyBugList: '.container .table',
         headerTable: 'thead',
-        bodyTable: 'tbody',
+        bodyTable: 'tbody tr',
+
 
 
 
