@@ -37,8 +37,9 @@ module.exports = {
     loginButton: '#login',
     allIssues: '#all_issues',
     bugSummary: '.text-left',
-    chooseBug: 'span:nth-child(9)',
-    attachment: '0',
+    chooseBug: 'span.text-left=Wrong text in Global Footer',
+    attachment: 'a',
+    textArea: 'textarea.text-area',
 
 
 

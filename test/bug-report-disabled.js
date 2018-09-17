@@ -16,40 +16,72 @@ describe('Bug Report Disabled State', function () {
             browser.pause(1000);
             browser.click(locator.allIssues);
             browser.pause(1000);
-            console.log('IRA');
-            console.log(locator.chooseBug);
-            console.log('tbody span'[8]);
-            console.log('tbody span'[9]);
-            console.log('tbody span'[10]);
             browser.click(locator.chooseBug);
-
-
             browser.pause(1000);
 
-            let linkExists = browser.getAttribute(locator.attachment, 'href');
-            assert.equal(linkExists, data.attachment, 'Link does NOT Exist');
-            //bowser.click(locator.)
-            browser.getURL();
+            let linkText = browser.getText(locator.attachment);
+            let link = browser.getAttribute(data.attachment, 'href');
+            assert.equal(link, linkText, 'link does NOT point to same website as shown in attachment ')
 
-            var selectBox = $('#selectbox');
-            console.log(selectBox.getText('option:checked')); // returns "uno"
-
-            selectBox.selectByVisibleText('cuatro');
-            console.log(selectBox.getText('option:checked')); // returns "cuatro"
-            browser.click(locator.allIssues);
-            let screenShotUrl = browser.getUrl();
-            assert.equal(screenShotUrl, data.attachment, 'Link does NOT Exist');
-            
+            //
+            // browser.click(locator.attachment);
+            // browser.pause(1000);
+            //
+            // let screenShotUrl = browser.getUrl();
+            //
+            // assert.equal(screenShotUrl, linkText, 'Link does NOT Exist');
+            // browser.click(locator.allIssues);
+            // browser.pause(1000);
+            // browser.click(locator.chooseBug);
+            //
         });
-        //
-        // it('Empty field should cause error message', function () {
-        //     browser.clearElement(locator.registrationPage.firstName);
-        //     browser.click(locator.registrationPage.registerButton);
-        //     browser.waitForVisible(locator.registrationPage.errorMessage,7000);
-        //     let error = browser.getText(locator.registrationPage.errorMessage);
-        //     assert.equal(error, data.emptyFieldError);
-        // });
-        //
+
+        it('Verify that Font-weight is 400', function () {
+            let fontWeight = browser.getCssProperty(locator.attachment, 'font-weight').value;
+            assert.equal(fontWeight, data.fontWeightAttach, 'Header Font Weight is incorrect')
+
+        });
+
+        it('Verify that Font- family is Segoe UI', function () {
+            let fontFamily = browser.getCssProperty(locator.attachment, 'font-family').value;
+            assert.equal(fontFamily, data.fontFamilyAttach.toLowerCase(), 'Header Font Family is incorrect')
+        });
+
+        it('Verify that Font-size is 16px', function () {
+            let fontSize = browser.getCssProperty(locator.attachment, 'font-size').value;
+            assert.equal(fontSize, data.fontSizeAttach, 'Header Font Size is incorrect')
+        });
+
+
+    });
+    describe('Steps to Reproduce', function () {
+
+
+        it('Verify that value displayed as multiline text area', function () {
+            let rowNum = Number(browser.getAttribute(locator.textArea, 'rows')[0]);
+            assert.isAtLeast(rowNum, data.minRowReq);
+        });
+
+        it('Verify that Background-color is #e9ecef33', function () {
+            //console.log(browser.getCssProperty(locator.textArea, 'background-color')[0].parsed.hex);
+            let backColor = browser.getCssProperty(locator.textArea, 'background-color')[0].value;
+            assert.equal(backColor, data.backColorSteps, 'Background Color is Incorrect');
+        });
+
+        it('Verify that width is 100%', function () {
+
+            let size = browser.getViewportSize('width');
+
+
+            let widthText = browser.getCssProperty(locator.textArea, 'width')[0].value;
+            assert.equal(size, widthText, 'Width of textbox is Incorrect');
+        });
+
+
+        it('Verify that Border-color is rgba(0,0,0,0.5)', function () {
+            let borderColor =browser.getCssProperty(locator.textArea, 'border-color')[0].value;
+            assert.equal(borderColor, data.borderColor);
+        });
 
     });
     
