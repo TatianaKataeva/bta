@@ -51,8 +51,5 @@ module.exports = {
         bugStatusTitle: 'thead th:nth-child(3)',
         bugReporterTitle: 'thead th:nth-child(4)',
 
-
-
-
     }
 };

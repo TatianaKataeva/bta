@@ -46,6 +46,8 @@ module.exports = {
         bugPriorityTitle: 'Priority',
         bugStatusTitle: 'Status',
         bugReporterTitle: 'Reporter',
+        textAlignHeader: 'center',
+        fontSizeHeader: '16px',
 
 
 

@@ -49,5 +49,14 @@ describe('Bug List Page', function () {
             assert.equal(bugReporterTitle, data.bugReporterTitle, 'Bug Reporter title is incorrect')
         });
 
+        it(`All columns titles have Text align ${data.textAlignHeader}`, function () {
+            let textAlign = browser.getCssProperty(locator.bugList.headerTable, 'text-align').value;
+            assert.equal(textAlign, data.textAlignHeader, 'Titles Text-align is incorrect')
+        });
+
+        it(`All columns titles have Text-size ${data.fontSize}`, function () {
+            let fontSize = browser.getCssProperty(locator.bugList.headerTable, 'font-size').value;
+            assert.equal(fontSize, data.fontSizeHeader, 'Titles Font-size is incorrect')
+        });
     });
 });
