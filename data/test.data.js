@@ -29,7 +29,13 @@ module.exports = {
     firstNameMaxLength: 20,
     lastNameMinLength: 1,
     lastNameMaxLength: 20,
-    emptyFieldError: 'Please fill all the fields'
+    emptyFieldError: 'Please fill all the fields',
+    emailFieldMinLength: 1,
+    emailFieldMiddleLength: 25,
+    emailFieldMaxLength: 45,
+    emailAlreadyRegisteredError: 'User with this email already exists'
+
+
   },
 
     globalFooter: {
@@ -40,4 +46,7 @@ module.exports = {
         fontFamily: "segoe ui",
         fontColor: "#212529"
     }
+
 };
+
+
