@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "rm -rf reports mochawesome-report errorShots && wdio wdio.conf.js",
-    "report": "marge ./reports/wdiomochawesome.json --reportTitle 'Test Results'"
+    "report": "marge ./reports/wdiomochawesome.json --reportTitle 'TestResults'"
   },
   "repository": {
     "type": "git",
