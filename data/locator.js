@@ -18,5 +18,17 @@ module.exports = {
     password: '#pass',
     loginButton: '#login',
     errorMessage: '.alert-danger'
+  },
+
+  bugReportFormDisabledState: {
+    titleFont: '.text-bold=Summary:',
+    valueFont: 'span.text-gray=Medium',
+    email: '#email',
+    password: '#pass',
+    loginButton: '#login',
+    allIssues: '#all_issues',
+    bugSummary: 'tbody span'
   }
+
 };
+

@@ -22,5 +22,16 @@ module.exports = {
     maxLength: 45,
     noLoginOrPassError: 'Specify email and password',
     wrongLoginError: 'User with this email does not exist'
+  },
+
+  bugReportFormDisabledState: {
+    fontWeight: "700",
+    fontFamily: "segoe ui",
+    fontSize: "16px",
+    fontColor: "rgba(33,37,41,1)",
+    fontWeightValue: "400",
+    fontFamilyValue: "segoe ui",
+    fontSizeValue: "16px",
+    fontColorValue: "rgba(0,0,0,0.49)"
   }
 };
