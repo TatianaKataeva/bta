@@ -28,7 +28,10 @@ module.exports = {
     registerButton: '#registration'
   },
 
-  bugReportDis: {
+    bugReportFormDisabledState: {
+    chooseBug: 'span.text-left=Wrong text in Global Footer',
+    attachment: 'a',
+    textArea: 'textarea.text-area',
     titleFont: '.text-bold',
     valueFont: '.text-grey',
     valueFont2: '.text-area',
@@ -37,9 +40,7 @@ module.exports = {
     loginButton: '#login',
     allIssues: '#all_issues',
     bugSummary: '.text-left',
-    chooseBug: 'span.text-left=Wrong text in Global Footer',
-    attachment: 'a',
-    textArea: 'textarea.text-area',
+
 
 
 

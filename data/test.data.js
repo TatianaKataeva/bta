@@ -32,7 +32,14 @@ module.exports = {
     emptyFieldError: 'Please fill all the fields'
   },
 
-  bugReportDis: {
+    bugReportFormDisabledState: {
+    attachment: 'a',
+    fontWeightAttach: "400",
+    fontFamilyAttach: "Segoe UI",
+    fontSizeAttach: "16px",
+    minRowReq: 2,
+    backColorSteps: 'rgba(233,236,239,0.2)',
+    borderColor: 'rgba(0,0,0,0.5)',
     fontWeight: "700",
     fontFamily: "Segoe UI",
     fontSize: "16px",
@@ -41,13 +48,7 @@ module.exports = {
     fontFamilyValue: "Segoe UI",
     fontSizeValue: "16px",
     fontColorValue: "#0000007d",
-    attachment: 'a',
-    fontWeightAttach: "400",
-    fontFamilyAttach: "Segoe UI",
-    fontSizeAttach: "16px",
-    minRowReq: 2,
-    backColorSteps: 'rgba(233,236,239,0.2)',
-    borderColor: 'rgba(0,0,0,0.5)',
+
 
 
   }

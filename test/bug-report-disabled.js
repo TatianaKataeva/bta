@@ -1,6 +1,6 @@
 const assert = require('chai').assert;
-const locator = require('../data/locator').bugReportDis;
-const data = require('../data/test.data').bugReportDis;
+const locator = require('../data/locator').bugReportFormDisabledState;
+const data = require('../data/test.data').bugReportFormDisabledState;
 
 describe('Bug Report Disabled State', function () {
 
@@ -23,17 +23,6 @@ describe('Bug Report Disabled State', function () {
             let link = browser.getAttribute(data.attachment, 'href');
             assert.equal(link, linkText, 'link does NOT point to same website as shown in attachment ')
 
-            //
-            // browser.click(locator.attachment);
-            // browser.pause(1000);
-            //
-            // let screenShotUrl = browser.getUrl();
-            //
-            // assert.equal(screenShotUrl, linkText, 'Link does NOT Exist');
-            // browser.click(locator.allIssues);
-            // browser.pause(1000);
-            // browser.click(locator.chooseBug);
-            //
         });
 
         it('Verify that Font-weight is 400', function () {
