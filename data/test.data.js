@@ -33,9 +33,10 @@ module.exports = {
     emailFieldMinLength: 1,
     emailFieldMiddleLength: 25,
     emailFieldMaxLength: 45,
-    emailAlreadyRegisteredError: 'User with this email already exists'
-
-
+    emailAlreadyRegisteredError: 'User with this email already exists',
+    passwordFieldMinLength: 1,
+    passwordFieldMaxLength: 45,
+    passwordFieldMiddleLength: 20
   },
 
     globalFooter: {

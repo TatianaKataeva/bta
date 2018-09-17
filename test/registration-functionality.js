@@ -113,7 +113,7 @@ describe('Email field', function () {
     assert.equal(input.length, data.emailFieldMaxLength);
   });
 
-  it('All empty fields should cause error message', function () {
+  it('Email empty field should cause error message', function () {
     browser.clearElement(locator.registrationPage.email);
     browser.click(locator.registrationPage.registerButton);
     let error = browser.getText(locator.registrationPage.errorMessage);
@@ -123,7 +123,49 @@ describe('Email field', function () {
   it('email Already Registered Error', function () {
     browser.setValue(locator.registrationPage.email, 'a');
     browser.click(locator.registrationPage.registerButton);
-    let error = browser.getText(locator.registrationPage.errorMessage2);
+    let error = browser.getText(locator.registrationPage.errorMessage);
     assert.equal(error, data.emptyFieldError);
   })
+});
+
+describe('Password field', function () {
+
+  it(`Can accept any ${data.passwordFieldMinLength} symbol${data.passwordFieldMinLength > 1 ? 's' : ''}`, function() {
+    browser.url('/');
+    browser.waitForVisible(locator.loginPage.registrationButton, 7000);
+    browser.click(locator.loginPage.registrationButton);
+    browser.setValue(locator.registrationPage.password,'1'.repeat(data.passwordFieldMinLength));
+    let input = browser.getValue(locator.registrationPage.password);
+    assert.equal(input.length, data.passwordFieldMinLength);
+  });
+
+  it(`Field can accept any ${data.passwordFieldMaxLength} symbols`, function() {
+    browser.clearElement(locator.registrationPage.password);
+    browser.setValue(locator.registrationPage.password,'1'.repeat(data.passwordFieldMaxLength));
+    let input = browser.getValue(locator.registrationPage.password);
+    assert.equal(input.length, data.passwordFieldMaxLength);
+  });
+
+  it(`Field can accept any ${data.passwordFieldMiddleLength} symbols`, function() {
+    browser.clearElement(locator.registrationPage.password);
+    browser.setValue(locator.registrationPage.password,'1'.repeat(data.passwordFieldMiddleLength));
+    let input = browser.getValue(locator.registrationPage.password);
+    assert.equal(input.length, data.passwordFieldMiddleLength);
+  });
+
+  it(`Field can\'t accept ${data.passwordFieldMaxLength + 1} symbols`, function() {
+    browser.clearElement(locator.registrationPage.password);
+    browser.setValue(locator.registrationPage.password,'1'.repeat(data.passwordFieldMaxLength + 1));
+    let input = browser.getValue(locator.registrationPage.password);
+    assert.equal(input.length, data.passwordFieldMaxLength);
+  });
+
+  it('Password empty field should cause error message', function () {
+    browser.clearElement(locator.registrationPage.password);
+    browser.click(locator.registrationPage.registerButton);
+    let error = browser.getText(locator.registrationPage.errorMessage);
+    assert.equal(error, data.emptyFieldError);
+  });
+
+
 });

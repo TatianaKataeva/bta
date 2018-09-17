@@ -26,7 +26,8 @@ module.exports = {
     lastName: '#lname',
     errorMessage: '.alert-danger',
     registerButton: '#registration',
-    email: '#email'
+    email: '#email',
+    password: '#pass'
   },
 
     globalFooter: {
