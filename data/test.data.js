@@ -32,6 +32,6 @@ module.exports = {
     fontFamily: 'segoe ui',
     fontWeight: '400',
     tagTextArea: 'textarea',
-    arrTitles: ['summary:', 'Steps to Reproduce:', 'Actual Result:', 'Expected result:', 'Attachment:', 'comments:']
+    arrTitles: 'Summary:, Steps to Reproduce:, Actual Result:, Expected result:, Attachment:, Comments:'
   }
 };
