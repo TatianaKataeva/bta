@@ -42,6 +42,11 @@ module.exports = {
     },
 
     bugList: {
+        bugSummaryTitle: 'Bug Summary',
+        bugPriorityTitle: 'Priority',
+        bugStatusTitle: 'Status',
+        bugReporterTitle: 'Reporter',
+
 
 
     }

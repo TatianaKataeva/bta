@@ -46,6 +46,10 @@ module.exports = {
         bodyBugList: '.container .table',
         headerTable: 'thead',
         bodyTable: 'tbody tr',
+        bugSummaryTitle: 'thead th:nth-child(1)',
+        bugPriorityTitle: 'thead th:nth-child(2)',
+        bugStatusTitle: 'thead th:nth-child(3)',
+        bugReporterTitle: 'thead th:nth-child(4)',
 
 
 
