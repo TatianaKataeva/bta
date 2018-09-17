@@ -30,6 +30,24 @@ module.exports = {
 
     globalFooter: {
         footer: '.custom-footer',
-        footerText: 'body .custom-footer',
+        footerText: 'body .custom-footer'
+    },
+
+    navigationBar : {
+        newBugButton: '#new_bug',
+        allIssuesButton: '#all_issues',
+        logoutButton: '#logout',
+        navigetionBar: '[class="card-footer text-center mb-3"] .input-group-append',
+        cardFooter: '.card-footer',
+        submitButton: '#todo_add'
+    },
+
+    bugList: {
+        bodyBugList: '.container .table',
+        headerTable: 'thead',
+        bodyTable: 'tbody',
+
+
+
     }
 };
