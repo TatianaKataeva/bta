@@ -25,6 +25,7 @@ module.exports = {
     inputActRes: '#actual',
     allIssuesBtn: '#all_issues',
     btn: '.btn-primary.btn-block',
+    bugTitle: 'span.text-left=Register button has wrong text',
     txtArea: '#str'
   }
 };
