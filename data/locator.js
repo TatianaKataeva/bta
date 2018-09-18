@@ -31,7 +31,9 @@ module.exports = {
     bugReportFormDisabledState: {
     chooseBug: 'span.text-left=Wrong text in Global Footer',
     attachment: 'a',
-    textArea: 'textarea.text-area',
+    allReportsPage: '#new_bug',
+    bugReportDisbForm: '.badge',
+    textArea: '.text-area',
     titleFont: '.text-bold',
     valueFont: '.text-grey',
     valueFont2: '.text-area',
