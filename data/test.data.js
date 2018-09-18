@@ -25,8 +25,10 @@ module.exports = {
   },
 
   registrationPageFunctionality: {
-    minLength: 1,
-    maxLength: 20,
+    firstNameMinLength: 1,
+    firstNameMaxLength: 20,
+    lastNameMinLength: 1,
+    lastNameMaxLength: 20,
     emptyFieldError: 'Please fill all the fields'
   },
 
@@ -39,6 +41,14 @@ module.exports = {
     navBarButtonsFontColor: "rgba(255,255,255,1)",
     BackgroundColor1: "rgba(23,162,184,1)",
     BackgroundColor2: "rgba(108,117,125,1)"
+  },
 
-  }
+ globalFooter: {
+        footerTitle: new Date().getFullYear().toString() + " Bug Tracker by React Web Development",
+        footerColor: "rgba(0,0,0,0.125)",
+        footerFontSize: "16px",
+        fontWeight: "400",
+        fontFamily: "segoe ui",
+        fontColor: "#212529"
+    }
 };

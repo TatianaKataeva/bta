@@ -23,6 +23,7 @@ module.exports = {
 
   registrationPage : {
     firstName: '#fname',
+    lastName: '#lname',
     errorMessage: '.alert-danger',
     registerButton: '#registration'
   },
@@ -35,5 +36,10 @@ module.exports = {
     cardFooter: '.card-footer',
     submitButton: '#todo_add'
   },
+  
+    globalFooter: {
+        footer: '.custom-footer',
+        footerText: 'body .custom-footer',
+    }
   
 };
