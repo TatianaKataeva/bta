@@ -23,8 +23,8 @@ module.exports = {
   bugReportEditMode: {
     input: '#summary',
     inputActRes: '#actual',
-    allIssuesBtn: '#all_issues',
-    btn: '.btn-primary.btn-block',
+    btnAllIssues: '#all_issues',
+    btnEdit: '.btn-primary.btn-block',
     bugTitle: 'span.text-left=Register button has wrong text',
     txtArea: '#str'
   },
