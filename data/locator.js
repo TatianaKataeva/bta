@@ -19,6 +19,4 @@ module.exports = {
     loginButton: '#login',
     errorMessage: '.alert-danger'
   },
-
-
 };
