@@ -17,7 +17,7 @@ module.exports = {
     email: '#email',
     password: '#pass',
     loginButton: '#login',
-    errorMessage: '.alert-danger',
+    errorMessage: '.alert-danger'
   },
 
 
