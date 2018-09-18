@@ -30,24 +30,15 @@ module.exports = {
 
     bugReportFormDisabledState: {
     chooseBug: 'span.text-left=Wrong text in Global Footer',
-    attachment: 'a',
-    allReportsPage: '#new_bug',
     bugReportDisbForm: '.badge',
+    attachment: 'a',
     textArea: '.text-area',
-    titleFont: '.text-bold',
-    valueFont: '.text-grey',
-    valueFont2: '.text-area',
+    titleFont: '.text-bold=Summary:',
+    valueFont: 'span.text-gray=Medium',
     email: '#email',
     password: '#pass',
     loginButton: '#login',
     allIssues: '#all_issues',
-    bugSummary: '.text-left',
-
-
-
-
+    bugSummary: 'tbody span'
   }
-
-
-
 };

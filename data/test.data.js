@@ -41,13 +41,13 @@ module.exports = {
     backColorSteps: 'rgba(233,236,239,0.2)',
     borderColor: 'rgba(0,0,0,0.5)',
     fontWeight: "700",
-    fontFamily: "Segoe UI",
+    fontFamily: "segoe ui",
     fontSize: "16px",
-    fontColor: "#212529",
+    fontColor: "rgba(33,37,41,1)",
     fontWeightValue: "400",
-    fontFamilyValue: "Segoe UI",
+    fontFamilyValue: "segoe ui",
     fontSizeValue: "16px",
-    fontColorValue: "#0000007d",
+    fontColorValue: "rgba(0,0,0,0.49)"
 
 
 

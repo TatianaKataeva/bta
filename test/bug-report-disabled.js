@@ -14,10 +14,9 @@ describe('Bug Report Disabled State', function () {
             browser.click(locator.loginButton);
             browser.waitForVisible(locator.allIssues,1000);
             browser.click(locator.allIssues);
-            browser.pause(1000);
-            //browser.waitForVisible(locator.allReportsPage,1000);
+            browser.waitForVisible(locator.chooseBug,1000);
             browser.click(locator.chooseBug);
-            //browser.waitForVisible(locator.bugReportDisbForm,1000);
+            browser.waitForVisible(locator.bugReportDisbForm,1000);
             browser.pause(1000);
 
             let linkText = browser.getText(locator.attachment);
