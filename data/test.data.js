@@ -24,6 +24,16 @@ module.exports = {
     wrongLoginError: 'User with this email does not exist'
   },
 
+  bugReportEditMode: {
+    tagInput: 'input',
+    fontSize: '16px',
+    fontColor: 'rgba(73,80,87,1)',
+    textAlign: 'start',
+    fontFamily: 'segoe ui',
+    fontWeight: '400',
+    tagTextArea: 'textarea'
+  },
+
   registrationPageFunctionality: {
     firstNameMinLength: 1,
     firstNameMaxLength: 20,
