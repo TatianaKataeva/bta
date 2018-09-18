@@ -1,9 +1,11 @@
 exports.config = {
 
   specs: [
+
     './test/client.js',
     './test/global-header.js',
     './test/login-functionality.js',
+    './test/bug-report-form-edit-mode.js'
     './test/registration-functionality.js',
     './test/navigation-bar.js',
     './test/global-footer.js'
