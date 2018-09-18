@@ -98,7 +98,7 @@ describe('Login Functionality', function () {
 
                it('Registered, but not matching password should cause error message', function () {
                     browser.refresh();
-                    browser.waitForVisible(locator.email,2000);
+                    browser.waitForVisible(locator.email,2000):
                     browser.setValue(locator.email,user.email);
                     browser.setValue(locator.password,data.oneChar);
                     browser.click(locator.loginButton);
@@ -140,5 +140,4 @@ describe('Login Functionality', function () {
                     assert.isTrue(boolenButton && boolenName,'true','No "Registration” page opened');
                 });
      });
-
 });
