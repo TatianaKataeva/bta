@@ -17,10 +17,23 @@ module.exports = {
     email: '#email',
     password: '#pass',
     loginButton: '#login',
-    errorMessage: '.alert-danger'
+    errorMessage: '.alert-danger',
+    registrationButton: '#registration'
   },
 
-  bugReportEditMode: {
+  registrationPage : {
+    firstName: '#fname',
+    lastName: '#lname',
+    errorMessage: '.alert-danger',
+    registerButton: '#registration'
+  },
+
+    globalFooter: {
+        footer: '.custom-footer',
+        footerText: 'body .custom-footer',
+    },
+  
+   bugReportEditMode: {
     input: '#summary',
     inputActRes: '#actual',
     allIssuesBtn: '#all_issues',
