@@ -56,39 +56,39 @@ describe('Login Functionality', function () {
 
     describe ('Error design', function (){
 
-        it('Error design background Color', function () {
+        it('Error message background Color', function () {
             let backgroundColor = browser.getCssProperty(locator.errorMessage, 'background-color').value;
-            assert.equal(backgroundColor, data.errorDesignBackgroundColor, 'Error design background Color')
+            assert.equal(backgroundColor, data.errorDesignBackgroundColor, 'background color is incorrect')
         });
 
-        it('Error design border Color', function () {
+        it('Error message border Color', function () {
             let borderColor = browser.getCssProperty(locator.errorMessage, 'border-color').value;
-            assert.equal(borderColor, data.errorDesignBorderColor, 'Error design border color is incorrect')
+            assert.equal(borderColor, data.errorDesignBorderColor, 'border color is incorrect')
         });
 
-        it('Error design font family', function () {
+        it('Error message font family', function () {
             let fontFamily = browser.getCssProperty(locator.errorMessage, 'font-family').value;
-            assert.equal(fontFamily, data.errorDesignFontFamily, 'Error design font family is incorrect')
+            assert.equal(fontFamily, data.errorDesignFontFamily, 'font family is incorrect')
         });
 
-        it('Error design font size', function () {
+        it('Error message font size', function () {
             let fontSize = browser.getCssProperty(locator.errorMessage, 'font-size').value;
-            assert.equal(fontSize, data.errorDesignFontSize, 'Error design font size is incorrect')
+            assert.equal(fontSize, data.errorDesignFontSize, 'font size is incorrect')
         });
 
-        it('Error design font weight', function () {
+        it('Error message font weight', function () {
             let fontWeight = browser.getCssProperty(locator.errorMessage, 'font-weight').value;
-            assert.equal(fontWeight, data.errorDesignFontWeight, 'Error design font weight is incorrect')
+            assert.equal(fontWeight, data.errorDesignFontWeight, 'font weight is incorrect')
         });
 
-        it('Error design font color', function () {
+        it('Error message font color', function () {
             let fontColor = browser.getCssProperty(locator.errorMessage, 'color').value;
-            assert.equal(fontColor, data.errorDesignFontColor, 'Error design font color is incorrect')
+            assert.equal(fontColor, data.errorDesignFontColor, 'font color is incorrect')
         });
 
-        it('Error design text align', function () {
+        it('Error message text align', function () {
             let textAlign = browser.getCssProperty(locator.errorMessage, 'text-align').value;
-            assert.equal(textAlign, data.errorDesignTextAlign, 'Error design text align is incorrect')
+            assert.equal(textAlign, data.errorDesignTextAlign, 'text align is incorrect')
         });
     });
 
