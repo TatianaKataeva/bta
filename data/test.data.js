@@ -24,6 +24,16 @@ module.exports = {
     wrongLoginError: 'User with this email does not exist'
   },
 
+  bugReportEditMode: {
+    tagInput: 'input',
+    fontSize: '16px',
+    fontColor: 'rgba(73,80,87,1)',
+    textAlign: 'start',
+    fontFamily: 'segoe ui',
+    fontWeight: '400',
+    tagTextArea: 'textarea'
+  },
+
   registrationPageFunctionality: {
     firstNameMinLength: 1,
     firstNameMaxLength: 20,
@@ -32,7 +42,18 @@ module.exports = {
     emptyFieldError: 'Please fill all the fields'
   },
 
-    globalFooter: {
+  navigationBarFunctionality:{
+    length: "flex",
+    navBarColor: "rgba(0,0,0,0.03)",
+    navBarFont: "segoe ui",
+    navBarFontSize: "16px",
+    navBarFontWeight: "400",
+    navBarButtonsFontColor: "rgba(255,255,255,1)",
+    BackgroundColor1: "rgba(23,162,184,1)",
+    BackgroundColor2: "rgba(108,117,125,1)"
+  },
+
+ globalFooter: {
         footerTitle: new Date().getFullYear().toString() + " Bug Tracker by React Web Development",
         footerColor: "rgba(0,0,0,0.125)",
         footerFontSize: "16px",
