@@ -45,7 +45,11 @@ module.exports = {
     textAlign: 'start',
     fontFamily: 'segoe ui',
     fontWeight: '400',
-    tagTextArea: 'textarea'
+    tagTextArea: 'textarea',
+    summaryArray: [
+      'Summary:',
+      'Steps to Reproduce:'
+    ]
   },
 
   registrationPageFunctionality: {

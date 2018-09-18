@@ -33,7 +33,7 @@ module.exports = {
 
   newBugReportPage: {
     summaryTxtFld: '.input-group.mb-2>input',
-    assigneeTxtFld: '.Dropdown-placeholder
+    assigneeTxtFld: '.Dropdown-placeholder'
   },
 
   navigationBar: {
