@@ -26,7 +26,9 @@ module.exports = {
     firstName: '#fname',
     lastName: '#lname',
     errorMessage: '.alert-danger',
-    registerButton: '#registration'
+    registerButton: '#registration',
+    email: '#email',
+    password: '#pass'
   },
 
   newBugReportPage :{
