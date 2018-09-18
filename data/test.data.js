@@ -16,12 +16,36 @@ module.exports = {
     textAlign: "center"
   },
 
+  loginPage: {
+    emailPlaceholderText: "Email *",
+    emailFieldFontSize: "16px",
+    emailFieldFontWeight: "400",
+    emailFieldFontFamily: "segoe ui",
+    emailFieldFontColor: "#495057",
+    emailFieldFocusColor: "#80bdff"
+  },
+  
+  user: {
+  email: 'tester@test.com',
+  password: 'test'
+  },
+
   loginPageFunctionality: {
     minLength: 1,
     midLength: 22,
     maxLength: 45,
     noLoginOrPassError: 'Specify email and password',
     wrongLoginError: 'User with this email does not exist'
+  },
+
+  bugReportEditMode: {
+    tagInput: 'input',
+    fontSize: '16px',
+    fontColor: 'rgba(73,80,87,1)',
+    textAlign: 'start',
+    fontFamily: 'segoe ui',
+    fontWeight: '400',
+    tagTextArea: 'textarea'
   },
 
   registrationPageFunctionality: {
@@ -39,7 +63,18 @@ module.exports = {
     passwordFieldMiddleLength: 20
   },
 
-    globalFooter: {
+  navigationBarFunctionality:{
+    length: "flex",
+    navBarColor: "rgba(0,0,0,0.03)",
+    navBarFont: "segoe ui",
+    navBarFontSize: "16px",
+    navBarFontWeight: "400",
+    navBarButtonsFontColor: "rgba(255,255,255,1)",
+    BackgroundColor1: "rgba(23,162,184,1)",
+    BackgroundColor2: "rgba(108,117,125,1)"
+  },
+
+ globalFooter: {
         footerTitle: new Date().getFullYear().toString() + " Bug Tracker by React Web Development",
         footerColor: "rgba(0,0,0,0.125)",
         footerFontSize: "16px",
