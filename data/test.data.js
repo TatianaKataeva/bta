@@ -103,6 +103,7 @@ module.exports = {
     fontWeight: "400",
     fontFamily: "segoe ui",
     fontColor: "#212529"
+
   }
 
 };
