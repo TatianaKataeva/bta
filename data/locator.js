@@ -22,7 +22,7 @@ module.exports = {
     registrationButton: '#registration'
   },
 
-  registrationPage : {
+  registrationPage: {
     firstName: '#fname',
     lastName: '#lname',
     errorMessage: '.alert-danger',
@@ -31,12 +31,12 @@ module.exports = {
     password: '#pass'
   },
 
-  newBugReportPage :{
-  summaryTxtFld: '.input-group.mb-2>input',
-  assigneeTxtFld: '.Dropdown-placeholder
-},
+  newBugReportPage: {
+    summaryTxtFld: '.input-group.mb-2>input',
+    assigneeTxtFld: '.Dropdown-placeholder
+  },
 
-  navigationBar : {
+  navigationBar: {
     newBugButton: '#new_bug',
     allIssuesButton: '#all_issues',
     logoutButton: '#logout',
@@ -44,13 +44,13 @@ module.exports = {
     cardFooter: '.card-footer',
     submitButton: '#todo_add'
   },
-  
-    globalFooter: {
-        footer: '.custom-footer',
-        footerText: 'body .custom-footer',
-    },
-  
-   bugReportEditMode: {
+
+  globalFooter: {
+    footer: '.custom-footer',
+    footerText: 'body .custom-footer',
+  },
+
+  bugReportEditMode: {
     input: '#summary',
     inputActRes: '#actual',
     allIssuesBtn: '#all_issues',

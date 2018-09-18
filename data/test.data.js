@@ -24,10 +24,10 @@ module.exports = {
     emailFieldFontColor: "#495057",
     emailFieldFocusColor: "#80bdff"
   },
-  
+
   user: {
-  email: 'tester@test.com',
-  password: 'test'
+    email: 'tester@test.com',
+    password: 'test'
   },
 
   loginPageFunctionality: {
@@ -63,7 +63,7 @@ module.exports = {
     passwordFieldMiddleLength: 20
   },
 
-  navigationBarFunctionality:{
+  navigationBarFunctionality: {
     length: "flex",
     navBarColor: "rgba(0,0,0,0.03)",
     navBarFont: "segoe ui",
@@ -74,14 +74,14 @@ module.exports = {
     BackgroundColor2: "rgba(108,117,125,1)"
   },
 
- globalFooter: {
-        footerTitle: new Date().getFullYear().toString() + " Bug Tracker by React Web Development",
-        footerColor: "rgba(0,0,0,0.125)",
-        footerFontSize: "16px",
-        fontWeight: "400",
-        fontFamily: "segoe ui",
-        fontColor: "#212529"
-    }
+  globalFooter: {
+    footerTitle: new Date().getFullYear().toString() + " Bug Tracker by React Web Development",
+    footerColor: "rgba(0,0,0,0.125)",
+    footerFontSize: "16px",
+    fontWeight: "400",
+    fontFamily: "segoe ui",
+    fontColor: "#212529"
+  }
 
 };
 
