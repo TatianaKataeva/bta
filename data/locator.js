@@ -31,6 +31,29 @@ module.exports = {
 
   newBugReportPage :{
   summaryTxtFld: '.input-group.mb-2>input',
-  assigneeTxtFld: '.Dropdown-placeholder'
+  assigneeTxtFld: '.Dropdown-placeholder
+},
+
+  navigationBar : {
+    newBugButton: '#new_bug',
+    allIssuesButton: '#all_issues',
+    logoutButton: '#logout',
+    navigetionBar: '[class="card-footer text-center mb-3"] .input-group-append',
+    cardFooter: '.card-footer',
+    submitButton: '#todo_add'
+  },
+  
+    globalFooter: {
+        footer: '.custom-footer',
+        footerText: 'body .custom-footer',
+    },
+  
+   bugReportEditMode: {
+    input: '#summary',
+    inputActRes: '#actual',
+    allIssuesBtn: '#all_issues',
+    btn: '.btn-primary.btn-block',
+    bugTitle: 'span.text-left=Register button has wrong text',
+    txtArea: '#str'
   }
 };
