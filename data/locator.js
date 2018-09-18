@@ -28,6 +28,15 @@ module.exports = {
     registerButton: '#registration'
   },
 
+  navigationBar : {
+    newBugButton: '#new_bug',
+    allIssuesButton: '#all_issues',
+    logoutButton: '#logout',
+    navigetionBar: '[class="card-footer text-center mb-3"] .input-group-append',
+    cardFooter: '.card-footer',
+    submitButton: '#todo_add'
+  },
+  
     globalFooter: {
         footer: '.custom-footer',
         footerText: 'body .custom-footer',

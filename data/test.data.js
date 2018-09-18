@@ -42,7 +42,18 @@ module.exports = {
     emptyFieldError: 'Please fill all the fields'
   },
 
-    globalFooter: {
+  navigationBarFunctionality:{
+    length: "flex",
+    navBarColor: "rgba(0,0,0,0.03)",
+    navBarFont: "segoe ui",
+    navBarFontSize: "16px",
+    navBarFontWeight: "400",
+    navBarButtonsFontColor: "rgba(255,255,255,1)",
+    BackgroundColor1: "rgba(23,162,184,1)",
+    BackgroundColor2: "rgba(108,117,125,1)"
+  },
+
+ globalFooter: {
         footerTitle: new Date().getFullYear().toString() + " Bug Tracker by React Web Development",
         footerColor: "rgba(0,0,0,0.125)",
         footerFontSize: "16px",
