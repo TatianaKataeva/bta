@@ -16,6 +16,11 @@ module.exports = {
     textAlign: "center"
   },
 
+  user: {
+  email: 'tester@test.com',
+  password: 'test'
+  },
+
   loginPageFunctionality: {
     minLength: 1,
     midLength: 22,

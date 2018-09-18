@@ -18,6 +18,7 @@ module.exports = {
     password: '#pass',
     loginButton: '#login',
     errorMessage: '.alert-danger',
+    requiredText: '.text-sm-left',
     registrationButton: '#registration'
   },
 
@@ -27,6 +28,11 @@ module.exports = {
     errorMessage: '.alert-danger',
     registerButton: '#registration'
   },
+
+  newBugReportPage :{
+  summaryTxtFld: '.input-group.mb-2>input',
+  assigneeTxtFld: '.Dropdown-placeholder
+},
 
   navigationBar : {
     newBugButton: '#new_bug',
