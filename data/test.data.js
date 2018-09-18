@@ -16,6 +16,15 @@ module.exports = {
     textAlign: "center"
   },
 
+  loginPage: {
+    emailPlaceholderText: "Email *",
+    emailFieldFontSize: "16px",
+    emailFieldFontWeight: "400",
+    emailFieldFontFamily: "segoe ui",
+    emailFieldFontColor: "#495057",
+    emailFieldFocusColor: "#80bdff"
+  },
+  
   user: {
   email: 'tester@test.com',
   password: 'test'
