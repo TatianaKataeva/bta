@@ -35,7 +35,9 @@ module.exports = {
     midLength: 22,
     maxLength: 45,
     noLoginOrPassError: 'Specify email and password',
-    wrongLoginError: 'User with this email does not exist'
+    wrongLoginError: 'User with this email does not exist',
+    wrongPasswordError:'Password is incorrect',
+    oneChar: 'A'
   },
 
   bugReportEditMode: {
