@@ -38,7 +38,25 @@ module.exports = {
     wrongLoginError: 'User with this email does not exist'
   },
 
-  bugReportEditMode: {
+  bugReportFormDisabledState: {
+      attachment: 'a',
+      fontWeightAttach: "400",
+      fontFamilyAttach: "Segoe UI",
+      fontSizeAttach: "16px",
+      minRowReq: 2,
+      backColorSteps: 'rgba(233,236,239,0.2)',
+      borderColor: 'rgba(0,0,0,0.5)',
+      fontWeight: "700",
+      fontFamily: "segoe ui",
+      fontSize: "16px",
+      fontColor: "rgba(33,37,41,1)",
+      fontWeightValue: "400",
+      fontFamilyValue: "segoe ui",
+      fontSizeValue: "16px",
+      fontColorValue: "rgba(0,0,0,0.49)"
+  },
+
+ bugReportEditMode: {
     tagInput: 'input',
     fontSize: '16px',
     fontColor: 'rgba(73,80,87,1)',
@@ -85,6 +103,7 @@ module.exports = {
     fontWeight: "400",
     fontFamily: "segoe ui",
     fontColor: "#212529"
+
   }
 
 };
