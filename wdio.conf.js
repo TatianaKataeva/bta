@@ -9,7 +9,6 @@ exports.config = {
     './test/registration-functionality.js',
     './test/navigation-bar.js',
     './test/global-footer.js',
-    './test/bug-report-disabled.js'
     './test/bug-report-form-disabled-state.js'
   ],
 
