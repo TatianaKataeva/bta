@@ -66,7 +66,13 @@ module.exports = {
     emailAlreadyRegisteredError: 'User with this email already exists',
     passwordFieldMinLength: 1,
     passwordFieldMaxLength: 45,
-    passwordFieldMiddleLength: 20
+    passwordFieldMiddleLength: 20,
+    errorBackgrColor: 'rgba(248,215,218,1)',
+    errorBorderColor: 'rgba(245,198,203,1)',
+    errorFontFamily: 'segoe ui',
+    errorFontSize: '16px',
+    errorFontWeight: '400',
+    errorFontColor: 'rgba(114,28,36,1)'
   },
 
   navigationBarFunctionality: {
