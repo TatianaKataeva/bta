@@ -128,7 +128,8 @@ module.exports = {
         fontSize: '16px',
         fontWeight: '400',
         fontColor: 'rgba(73,80,87,1)',
-        textAlign: 'start'
+        textAlignStart: 'start',
+        textAlignLeft: 'left'
 
     }
 

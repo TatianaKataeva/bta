@@ -39,7 +39,8 @@ module.exports = {
         stepsToReproduce: '#str',
         actualResult: '#actual',
         expectedResult: '#expected',
-        attachmentLink: '#attachment'
+        attachmentLink: '#attachment',
+        assigneeDropDown: '#assignee div.Dropdown-root'
     },
 
     navigationBar: {
