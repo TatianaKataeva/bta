@@ -3,11 +3,13 @@ const data = require('../data/test.data');
 const locator = require('../data/locator');
 
 
-describe('New bug report page', function () {
-    describe('Text fields', function () {
-        describe('Summary field', function() {
-            it(`Font family should be ${data.newBugReportPage.fontFamily}`, function () {
+describe('New bug report page', function () { //TODO: remove this describe. The page name is a suite and {describe} should be as a sub-suite
 
+    describe('Text fields', function () {
+
+        describe('Summary field', function () {
+
+            it(`Font family should be ${data.newBugReportPage.fontFamily}`, function () {
                 browser.url('/');
                 browser.waitForVisible(locator.loginPage.email);
                 browser.setValue(locator.loginPage.email, data.user.email);
@@ -16,15 +18,12 @@ describe('New bug report page', function () {
                 browser.waitForVisible(locator.newBugReportPage.bugReportForm);
                 let fontFamily = browser.getCssProperty(locator.newBugReportPage.summaryField, 'font-family');
                 assert.equal(fontFamily.value, data.newBugReportPage.fontFamily);
-
             });
-
 
             it(`Font size should be ${data.newBugReportPage.fontSize}`, function () {
                 let fontSize = browser.getCssProperty(locator.newBugReportPage.summaryField, 'font-size');
                 assert.equal(fontSize.value, data.newBugReportPage.fontSize);
             });
-
 
             it(`Font weight should be ${data.newBugReportPage.fontWeight}`, function () {
                 let fontWeight = browser.getCssProperty(locator.newBugReportPage.summaryField, 'font-weight');
@@ -43,20 +42,17 @@ describe('New bug report page', function () {
 
         });
 
-        describe('Steps to reproduce field', function() {
-            it(`Font family should be ${data.newBugReportPage.fontFamily}`, function () {
+        describe('Steps to reproduce field', function () {
 
+            it(`Font family should be ${data.newBugReportPage.fontFamily}`, function () {
                 let fontFamily = browser.getCssProperty(locator.newBugReportPage.stepsToReproduce, 'font-family');
                 assert.equal(fontFamily.value, data.newBugReportPage.fontFamily);
-
             });
-
 
             it(`Font size should be ${data.newBugReportPage.fontSize}`, function () {
                 let fontSize = browser.getCssProperty(locator.newBugReportPage.stepsToReproduce, 'font-size');
                 assert.equal(fontSize.value, data.newBugReportPage.fontSize);
             });
-
 
             it(`Font weight should be ${data.newBugReportPage.fontWeight}`, function () {
                 let fontWeight = browser.getCssProperty(locator.newBugReportPage.stepsToReproduce, 'font-weight');
@@ -75,20 +71,18 @@ describe('New bug report page', function () {
 
         });
 
-        describe('Actual result field', function() {
-            it(`Font family should be ${data.newBugReportPage.fontFamily}`, function () {
+        describe('Actual result field', function () {
 
+            it(`Font family should be ${data.newBugReportPage.fontFamily}`, function () {
                 let fontFamily = browser.getCssProperty(locator.newBugReportPage.actualResult, 'font-family');
                 assert.equal(fontFamily.value, data.newBugReportPage.fontFamily);
 
             });
 
-
             it(`Font size should be ${data.newBugReportPage.fontSize}`, function () {
                 let fontSize = browser.getCssProperty(locator.newBugReportPage.actualResult, 'font-size');
                 assert.equal(fontSize.value, data.newBugReportPage.fontSize);
             });
-
 
             it(`Font weight should be ${data.newBugReportPage.fontWeight}`, function () {
                 let fontWeight = browser.getCssProperty(locator.newBugReportPage.actualResult, 'font-weight');
@@ -107,20 +101,18 @@ describe('New bug report page', function () {
 
         });
 
-        describe('Expected result field', function() {
-            it(`Font family should be ${data.newBugReportPage.fontFamily}`, function () {
+        describe('Expected result field', function () {
 
+            it(`Font family should be ${data.newBugReportPage.fontFamily}`, function () {
                 let fontFamily = browser.getCssProperty(locator.newBugReportPage.expectedResult, 'font-family');
                 assert.equal(fontFamily.value, data.newBugReportPage.fontFamily);
 
             });
 
-
             it(`Font size should be ${data.newBugReportPage.fontSize}`, function () {
                 let fontSize = browser.getCssProperty(locator.newBugReportPage.expectedResult, 'font-size');
                 assert.equal(fontSize.value, data.newBugReportPage.fontSize);
             });
-
 
             it(`Font weight should be ${data.newBugReportPage.fontWeight}`, function () {
                 let fontWeight = browser.getCssProperty(locator.newBugReportPage.expectedResult, 'font-weight');
@@ -139,12 +131,11 @@ describe('New bug report page', function () {
 
         });
 
-        describe('Attachment link field', function() {
-            it(`Font family should be ${data.newBugReportPage.fontFamily}`, function () {
+        describe('Attachment link field', function () {
 
+            it(`Font family should be ${data.newBugReportPage.fontFamily}`, function () {
                 let fontFamily = browser.getCssProperty(locator.newBugReportPage.attachmentLink, 'font-family');
                 assert.equal(fontFamily.value, data.newBugReportPage.fontFamily);
-
             });
 
 
