@@ -1,5 +1,6 @@
 const assert = require('chai').assert;
 const locator = require('../data/locator').loginPage;
+const data = require('../data/test.data').loginFunctionality;
 const locator3 = require('../data/locator').registrationPage;
 const locator2 = require('../data/locator').newBugReportPage;
 const user = require('../data/test.data').user;
@@ -47,12 +48,13 @@ describe('Login Functionality', function () {
         });
 
         it('Unregistered email should cause error message', function () {
+            browser.reload();
             browser.url('/');
             browser.waitForVisible(locator.email,7000);
             browser.setValue(locator.email,'a@nn.a');
             browser.setValue(locator.password,'1');
             browser.click(locator.loginButton);
-            browser.waitForText(locator.errorMessage, 1000);
+            browser.waitForVisible(locator.errorMessage, 1000);
             let error = browser.getText(locator.errorMessage);
             assert.equal(error, data.wrongLoginError);
         });
@@ -91,7 +93,7 @@ describe('Login Functionality', function () {
                      browser.refresh();
                      browser.pause(2000);
                      browser.click(locator.loginButton);
-                     browser.waitForText(locator.errorMessage, 2000);;
+                     browser.waitForText(locator.errorMessage, 2000);
                      let error = browser.getText(locator.errorMessage);
                      assert.equal(error,'Specify email and password', 'мое сообщение');
                 });
@@ -136,7 +138,7 @@ describe('Login Functionality', function () {
                     browser.pause(2000);
                     let buttonText=browser.getText(locator.registrationButton);
                     let boolen=browser.isExisting(locator3.firstName);
-                    assert.equal(buttonText,'Register','No "Registration” page opened')
+                    assert.equal(buttonText,'Register','No "Registration” page opened');
                     assert.isTrue(boolen,'No "Registration” page opened')
                 });
      });
