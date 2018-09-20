@@ -1,5 +1,6 @@
 const assert = require('chai').assert;
 const locator = require('../data/locator').loginPage;
+const data = require('../data/test.data').loginFunctionality;
 const locator3 = require('../data/locator').registrationPage;
 const locator2 = require('../data/locator').newBugReportPage;
 const user = require('../data/test.data').user;

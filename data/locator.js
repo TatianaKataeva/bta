@@ -50,12 +50,28 @@ module.exports = {
     footerText: 'body .custom-footer',
   },
 
+  bugReportFormDisabledState: {
+      chooseBug: 'span.text-left=Wrong text in Global Footer',
+      bugReportDisbForm: '.badge',
+      attachment: 'a',
+      textArea: '.text-area',
+      titleFont: '.text-bold=Summary:',
+      valueFont: 'span.text-gray=Medium',
+      email: '#email',
+      password: '#pass',
+      loginButton: '#login',
+      allIssues: '#all_issues',
+      bugSummary: 'tbody span'
+  },
+
   bugReportEditMode: {
     input: '#summary',
     inputActRes: '#actual',
     allIssuesBtn: '#all_issues',
     btn: '.btn-primary.btn-block',
     bugTitle: 'span.text-left=Register button has wrong text',
-    txtArea: '#str'
+    txtArea: '#str',
+    registerButton: '#registration'
   }
+
 };

@@ -16,6 +16,16 @@ module.exports = {
     textAlign: "center"
   },
 
+    loginFunctionality: {
+        errorDesignBackgroundColor: 'rgba(248,215,218,1)' ,
+        errorDesignBorderColor: 'rgb(245,198,203)',
+        errorDesignFontFamily: 'segoe ui',
+        errorDesignFontSize: '16px',
+        errorDesignFontWeight: '400',
+        errorDesignTextAlign: 'center',
+        errorDesignFontColor: 'rgba(114,28,36,1)'
+    },
+
   loginPage: {
     emailPlaceholderText: "Email *",
     emailFieldFontSize: "16px",
@@ -38,7 +48,25 @@ module.exports = {
     wrongLoginError: 'User with this email does not exist'
   },
 
-  bugReportEditMode: {
+  bugReportFormDisabledState: {
+      attachment: 'a',
+      fontWeightAttach: "400",
+      fontFamilyAttach: "Segoe UI",
+      fontSizeAttach: "16px",
+      minRowReq: 2,
+      backColorSteps: 'rgba(233,236,239,0.2)',
+      borderColor: 'rgba(0,0,0,0.5)',
+      fontWeight: "700",
+      fontFamily: "segoe ui",
+      fontSize: "16px",
+      fontColor: "rgba(33,37,41,1)",
+      fontWeightValue: "400",
+      fontFamilyValue: "segoe ui",
+      fontSizeValue: "16px",
+      fontColorValue: "rgba(0,0,0,0.49)"
+  },
+
+ bugReportEditMode: {
     tagInput: 'input',
     fontSize: '16px',
     fontColor: 'rgba(73,80,87,1)',
@@ -85,6 +113,7 @@ module.exports = {
     fontWeight: "400",
     fontFamily: "segoe ui",
     fontColor: "#212529"
+
   }
 
 };
