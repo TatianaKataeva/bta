@@ -16,6 +16,16 @@ module.exports = {
     textAlign: "center"
   },
 
+    loginFunctionality: {
+        errorDesignBackgroundColor: 'rgba(248,215,218,1)' ,
+        errorDesignBorderColor: 'rgb(245,198,203)',
+        errorDesignFontFamily: 'segoe ui',
+        errorDesignFontSize: '16px',
+        errorDesignFontWeight: '400',
+        errorDesignTextAlign: 'center',
+        errorDesignFontColor: 'rgba(114,28,36,1)'
+    },
+
   loginPage: {
     emailPlaceholderText: "Email *",
     emailFieldFontSize: "16px",

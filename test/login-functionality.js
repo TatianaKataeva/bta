@@ -1,5 +1,6 @@
 const assert = require('chai').assert;
 const locator = require('../data/locator').loginPage;
+const data = require('../data/test.data').loginFunctionality;
 const locator3 = require('../data/locator').registrationPage;
 const locator2 = require('../data/locator').newBugReportPage;
 const user = require('../data/test.data').user;
@@ -58,87 +59,42 @@ describe('Login Functionality', function () {
         });
     });
 
-     describe('Password Field', function () {
+    describe ('Error design', function (){
 
-                it('User can enter 1 any symbol', function () {
-                    browser.setValue(locator.password,'9');
-                    let input = browser.getValue(locator.password);
-                    assert.equal(input, '9');
-                });
+        it('Error message background Color', function () {
+            let backgroundColor = browser.getCssProperty(locator.errorMessage, 'background-color').value;
+            assert.equal(backgroundColor, data.errorDesignBackgroundColor, 'background color is incorrect')
+        });
 
-                it('User can enter 22 symbols', function () {
-                    browser.clearElement(locator.password);
-                    browser.setValue(locator.password,'9'.repeat(45));
-                    let input = browser.getValue(locator.password);
-                    assert.equal(input,'9'.repeat(45));
-                });
+        it('Error message border Color', function () {
+            let borderColor = browser.getCssProperty(locator.errorMessage, 'border-color').value;
+            assert.equal(borderColor, data.errorDesignBorderColor, 'border color is incorrect')
+        });
 
-                it('User can enter 45 symbols', function () {
-                    browser.clearElement(locator.password);
-                    browser.setValue(locator.password,'A'.repeat(23));
-                    let input = browser.getValue(locator.password);
-                    assert.equal(input, 'A'.repeat(23));
-                });
+        it('Error message font family', function () {
+            let fontFamily = browser.getCssProperty(locator.errorMessage, 'font-family').value;
+            assert.equal(fontFamily, data.errorDesignFontFamily, 'font family is incorrect')
+        });
 
-                it('User can\'t enter 46 symbols', function () {
-                    browser.clearElement(locator.password);
-                    browser.setValue(locator.password,'Z'.repeat(46));
-                    let input = browser.getValue(locator.password);
-                    assert.equal(input.length, 45);
-                });
+        it('Error message font size', function () {
+            let fontSize = browser.getCssProperty(locator.errorMessage, 'font-size').value;
+            assert.equal(fontSize, data.errorDesignFontSize, 'font size is incorrect')
+        });
 
-               it('Empty password field should cause error message', function () {
-                     browser.refresh();
-                     browser.pause(2000);
-                     browser.click(locator.loginButton);
-                     browser.waitForText(locator.errorMessage, 2000);;
-                     let error = browser.getText(locator.errorMessage);
-                     assert.equal(error,'Specify email and password', 'мое сообщение');
-                });
-                it('Registered but not matching password should cause error message', function () {
-                    browser.clearElement(locator.email);
-                    browser.setValue(locator.email,'ipvola@gmail.com');
-                    browser.setValue(locator.password,'1');
-                    browser.click(locator.loginButton);
-                    browser.pause(1000);
-                    let error = browser.getText(locator.errorMessage);
-                    assert.equal(error, 'Password is incorrect');
-                });
-                it('All symbols in password field are replaced by bullet', function (){
-                    let type=browser.getAttribute(locator.password,'type');
-                    assert.equal(type, 'password');
-                });
-     });
-      describe('Login with Correct credentials: Redirecting from "Login" page to the "New Bug Report" page ',function(){
-                it('Redirecting', function() {
-                    browser.refresh();
-                    browser.pause(2000);
-                    browser.setValue(locator.email,user.email);
-                    browser.setValue(locator.password,user.password);
-                    browser.click(locator.loginButton);
-                    browser.pause(5000);
-                    let summary=$(locator2.summaryTxtFld);
-                    let ariaLabel=summary.getAttribute('aria-label');
-                    let assignee=$(locator2.assigneeTxtFld);
-                    let assigneeText=assignee.getText();
-                    assert.equal(assigneeText,'Assignee *','No "New Bug Report” page opened');
-                    assert.equal(ariaLabel,'Summary','No "New Bug Report” page opened');
-                 });
-      });
+        it('Error message font weight', function () {
+            let fontWeight = browser.getCssProperty(locator.errorMessage, 'font-weight').value;
+            assert.equal(fontWeight, data.errorDesignFontWeight, 'font weight is incorrect')
+        });
 
-     describe(' Redirecting from "Login page" to “Registration" page', function () {
+        it('Error message font color', function () {
+            let fontColor = browser.getCssProperty(locator.errorMessage, 'color').value;
+            assert.equal(fontColor, data.errorDesignFontColor, 'font color is incorrect')
+        });
 
-                it('Redirecting', function(){
-
-                    browser.refresh();
-                    browser.pause(2000);
-                    browser.click(locator.registrationButton);
-                    browser.pause(2000);
-                    let buttonText=browser.getText(locator.registrationButton);
-                    let boolen=browser.isExisting(locator3.firstName);
-                    assert.equal(buttonText,'Register','No "Registration” page opened')
-                    assert.isTrue(boolen,'No "Registration” page opened')
-                });
-     });
+        it('Error message text align', function () {
+            let textAlign = browser.getCssProperty(locator.errorMessage, 'text-align').value;
+            assert.equal(textAlign, data.errorDesignTextAlign, 'text align is incorrect')
+        });
+    });
 
 });
