@@ -8,7 +8,8 @@ exports.config = {
     './test/bug-report-form-edit-mode.js',
     './test/registration-functionality.js',
     './test/navigation-bar.js',
-    './test/global-footer.js',
+    './test/global-footer.js'
+    './test/new-bug-report-page.js'
     './test/bug-report-form-disabled-state.js'
   ],
 

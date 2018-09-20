@@ -33,7 +33,14 @@ module.exports = {
 
   newBugReportPage: {
     summaryTxtFld: '.input-group.mb-2>input',
-    assigneeTxtFld: '.Dropdown-placeholder'
+    assigneeTxtFld: '.Dropdown-placeholder',
+    bugReportForm: '#bug-form',
+    summaryField: '#summary',
+    stepsToReproduce: '#str',
+    actualResult: '#actual',
+    expectedResult: '#expected',
+    attachmentLink: '#attachment'
+
   },
 
   navigationBar: {
@@ -73,5 +80,5 @@ module.exports = {
     txtArea: '#str',
     registerButton: '#registration'
   }
-
 };
+
