@@ -60,71 +60,72 @@ describe('Login Functionality', function () {
         });
     });
 
-     describe('Password Field', function () {
+     describe('Password field', function () {
 
-                it('User can enter 1 any symbol', function () {
-                    browser.setValue(locator.password,'9');
-                    let input = browser.getValue(locator.password);
-                    assert.equal(input, '9');
-                });
+         it(`User can enter ${data.minLength} any symbol${data.minLength > 1 ? 's' : ''}`, function () {
+             browser.setValue(locator.password,data.oneChar.repeat(data.minLength));
+             let actualInpt = browser.getValue(locator.password);
+             assert.equal(actualInpt.length, data.minLength, 'Min input length is incorrect');
+         });
 
-                it('User can enter 22 symbols', function () {
-                    browser.clearElement(locator.password);
-                    browser.setValue(locator.password,'9'.repeat(45));
-                    let input = browser.getValue(locator.password);
-                    assert.equal(input,'9'.repeat(45));
-                });
+         it(`User can enter ${data.midLength} symbols`, function () {
+              browser.clearElement(locator.password);
+              browser.setValue(locator.password,data.oneChar.repeat(data.midLength));
+              let input = browser.getValue(locator.password);
+              assert.equal(input.length,data.midLength, 'Medium input length is incorrect');
+         });
 
-                it('User can enter 45 symbols', function () {
-                    browser.clearElement(locator.password);
-                    browser.setValue(locator.password,'A'.repeat(23));
-                    let input = browser.getValue(locator.password);
-                    assert.equal(input, 'A'.repeat(23));
-                });
+         it(`User can enter ${data.maxLength} symbols`, function () {
+               browser.clearElement(locator.password);
+               browser.setValue(locator.password,data.oneChar.repeat(data.maxLength));
+               let input = browser.getValue(locator.password);
+               assert.equal(input.length, data.maxLength, 'Max input length is incorrect');
+         });
 
-                it('User can\'t enter 46 symbols', function () {
-                    browser.clearElement(locator.password);
-                    browser.setValue(locator.password,'Z'.repeat(46));
-                    let input = browser.getValue(locator.password);
-                    assert.equal(input.length, 45);
-                });
+         it(`User can't enter ${data.maxLength+1} symbols`, function () {
+                browser.clearElement(locator.password);
+                browser.setValue(locator.password,data.oneChar.repeat(data.maxLength+1));
+                let input = browser.getValue(locator.password);
+                assert.equal(input.length, data.maxLength, ' User can enter more symbols than allowed ');
+         });
 
                it('Empty password field should cause error message', function () {
                      browser.refresh();
-                     browser.pause(2000);
+                     browser.waitForVisible(locator.loginButton,2000);
                      browser.click(locator.loginButton);
                      browser.waitForText(locator.errorMessage, 2000);
                      let error = browser.getText(locator.errorMessage);
-                     assert.equal(error,'Specify email and password', 'мое сообщение');
+                     assert.equal(error,data.noLoginOrPassError, 'No expected error message displayed when Password field is empty ');
                 });
-                it('Registered but not matching password should cause error message', function () {
-                    browser.clearElement(locator.email);
-                    browser.setValue(locator.email,'ipvola@gmail.com');
-                    browser.setValue(locator.password,'1');
+
+               it('Registered, but not matching password should cause error message', function () {
+                    browser.refresh();
+                    browser.waitForVisible(locator.email,2000);
+                    browser.setValue(locator.email,user.email);
+                    browser.setValue(locator.password,data.oneChar);
                     browser.click(locator.loginButton);
-                    browser.pause(1000);
+                    browser.waitForVisible(locator.errorMessage,2000);
                     let error = browser.getText(locator.errorMessage);
-                    assert.equal(error, 'Password is incorrect');
-                });
-                it('All symbols in password field are replaced by bullet', function (){
+                    assert.equal(error,data.wrongPasswordError, 'No expected error message displayed when Password does not match');
+               });
+
+               it('All symbols in password field are replaced by bullet', function (){
                     let type=browser.getAttribute(locator.password,'type');
-                    assert.equal(type, 'password');
-                });
+                    assert.equal(type, 'password', 'Password field type is wrong');
+               });
      });
+
       describe('Login with Correct credentials: Redirecting from "Login" page to the "New Bug Report" page ',function(){
+
                 it('Redirecting', function() {
                     browser.refresh();
-                    browser.pause(2000);
+                    browser.waitForVisible(locator.email,2000);
                     browser.setValue(locator.email,user.email);
                     browser.setValue(locator.password,user.password);
                     browser.click(locator.loginButton);
-                    browser.pause(5000);
-                    let summary=$(locator2.summaryTxtFld);
-                    let ariaLabel=summary.getAttribute('aria-label');
-                    let assignee=$(locator2.assigneeTxtFld);
-                    let assigneeText=assignee.getText();
-                    assert.equal(assigneeText,'Assignee *','No "New Bug Report” page opened');
-                    assert.equal(ariaLabel,'Summary','No "New Bug Report” page opened');
+                    browser.waitForVisible(locator2.newBugForm,2000);
+                    let isBugForm=browser.isExisting(locator2.newBugForm);
+                    assert.isTrue(isBugForm,'true','No "New Bug Report” page opened');
                  });
       });
 
@@ -133,13 +134,12 @@ describe('Login Functionality', function () {
                 it('Redirecting', function(){
 
                     browser.refresh();
-                    browser.pause(2000);
+                    browser.waitForVisible(locator.registrationButton);
                     browser.click(locator.registrationButton);
-                    browser.pause(2000);
-                    let buttonText=browser.getText(locator.registrationButton);
-                    let boolen=browser.isExisting(locator3.firstName);
-                    assert.equal(buttonText,'Register','No "Registration” page opened');
-                    assert.isTrue(boolen,'No "Registration” page opened')
+                    browser.waitForVisible(locator3.firstName,2000);
+                    let boolenButton=browser.isExisting(locator.registrationButton);
+                    let boolenName=browser.isExisting(locator3.firstName);
+                    assert.isTrue(boolenButton && boolenName,'true','No "Registration” page opened');
                 });
      });
 

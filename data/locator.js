@@ -40,7 +40,6 @@ module.exports = {
     actualResult: '#actual',
     expectedResult: '#expected',
     attachmentLink: '#attachment'
-
   },
 
   navigationBar: {
