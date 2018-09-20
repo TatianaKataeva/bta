@@ -33,7 +33,14 @@ module.exports = {
 
   newBugReportPage: {
     summaryTxtFld: '.input-group.mb-2>input',
-    assigneeTxtFld: '.Dropdown-placeholder'
+    assigneeTxtFld: '.Dropdown-placeholder',
+    bugReportForm: '#bug-form',
+    summaryField: '#summary',
+    stepsToReproduce: '#str',
+    actualResult: '#actual',
+    expectedResult: '#expected',
+    attachmentLink: '#attachment'
+
   },
 
   navigationBar: {
@@ -58,4 +65,6 @@ module.exports = {
     bugTitle: 'span.text-left=Register button has wrong text',
     txtArea: '#str'
   }
+
+
 };

@@ -9,6 +9,7 @@ exports.config = {
     './test/registration-functionality.js',
     './test/navigation-bar.js',
     './test/global-footer.js'
+      './test/new-bug-report-page.js'
   ],
 
   exclude: [

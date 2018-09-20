@@ -85,6 +85,16 @@ module.exports = {
     fontWeight: "400",
     fontFamily: "segoe ui",
     fontColor: "#212529"
+  },
+
+   newBugReportPage: {
+    fontFamily: 'segoe ui',
+    fontSize: '16px',
+    fontWeight: '400',
+    fontColor: 'rgba(73,80,87,1)',
+    textAlign: 'start'
+
+
   }
 
 };
