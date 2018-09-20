@@ -34,7 +34,12 @@ module.exports = {
   newBugReportPage: {
     summaryTxtFld: '.input-group.mb-2>input',
     assigneeTxtFld: '.Dropdown-placeholder',
-    newBugForm: '#bug-form'
+    bugReportForm: '#bug-form',
+    summaryField: '#summary',
+    stepsToReproduce: '#str',
+    actualResult: '#actual',
+    expectedResult: '#expected',
+    attachmentLink: '#attachment'
   },
 
   navigationBar: {
@@ -51,12 +56,28 @@ module.exports = {
     footerText: 'body .custom-footer',
   },
 
+  bugReportFormDisabledState: {
+      chooseBug: 'span.text-left=Wrong text in Global Footer',
+      bugReportDisbForm: '.badge',
+      attachment: 'a',
+      textArea: '.text-area',
+      titleFont: '.text-bold=Summary:',
+      valueFont: 'span.text-gray=Medium',
+      email: '#email',
+      password: '#pass',
+      loginButton: '#login',
+      allIssues: '#all_issues',
+      bugSummary: 'tbody span'
+  },
+
   bugReportEditMode: {
     input: '#summary',
     inputActRes: '#actual',
     allIssuesBtn: '#all_issues',
     btn: '.btn-primary.btn-block',
     bugTitle: 'span.text-left=Register button has wrong text',
-    txtArea: '#str'
+    txtArea: '#str',
+    registerButton: '#registration'
   }
 };
+
