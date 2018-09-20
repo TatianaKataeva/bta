@@ -1,56 +1,61 @@
 const assert = require('chai').assert;
 const locator = require('../data/locator').loginPage;
 const data = require('../data/test.data').loginFunctionality;
+const locator3 = require('../data/locator').registrationPage;
+const locator2 = require('../data/locator').newBugReportPage;
+const user = require('../data/test.data').user;
+const data = require('../data/test.data').loginPageFunctionality;
 
 describe('Login Functionality', function () {
 
     describe('Email Field', function () {
 
-        it('User can enter 1 symbol', function () {
+        it(`User can enter ${data.minLength} symbol${data.minLength > 1 ? 's' : ''}`, function () {
             browser.url('/');
-            browser.pause(2000);
-            browser.setValue(locator.email,'1');
+            browser.waitForVisible(locator.email,7000);
+            browser.setValue(locator.email,'1'.repeat(data.minLength));
             let input = browser.getValue(locator.email);
-            assert.equal(input.length, 1);
+            assert.equal(input.length, data.minLength);
         });
 
-        it('User can enter 22 symbols', function () {
+        it(`User can enter ${data.midLength} symbols`, function () {
             browser.clearElement(locator.email);
-            browser.setValue(locator.email,'a'.repeat(22));
+            browser.setValue(locator.email,'a'.repeat(data.midLength));
             let input = browser.getValue(locator.email);
-            assert.equal(input.length, 22);
+            assert.equal(input.length, data.midLength);
         });
 
-        it('User can enter 45 symbols', function () {
+        it(`User can enter ${data.maxLength} symbols`, function () {
             browser.clearElement(locator.email);
-            browser.setValue(locator.email,'n'.repeat(45));
+            browser.setValue(locator.email,'n'.repeat(data.maxLength));
             let input = browser.getValue(locator.email);
-            assert.equal(input.length, 45);
+            assert.equal(input.length, data.maxLength);
         });
 
-        it('User can\'t enter 46 symbols', function () {
+        it(`User can\'t enter ${data.maxLength + 1} symbols`, function () {
             browser.clearElement(locator.email);
-            browser.setValue(locator.email,'x'.repeat(46));
+            browser.setValue(locator.email,'x'.repeat(data.maxLength + 1));
             let input = browser.getValue(locator.email);
-            assert.equal(input.length, 45);
+            assert.equal(input.length, data.maxLength);
         });
 
         it('Empty email field should cause error message', function () {
             browser.clearElement(locator.email);
             browser.click(locator.loginButton);
-            browser.pause(1000);
+            browser.waitForVisible(locator.errorMessage,7000);
             let error = browser.getText(locator.errorMessage);
-            assert.equal(error, 'Specify email and password');
+            assert.equal(error, data.noLoginOrPassError);
         });
 
         it('Unregistered email should cause error message', function () {
-            browser.clearElement(locator.email);
+            browser.url('/');
+            browser.waitForVisible(locator.email,7000);
             browser.setValue(locator.email,'a@nn.a');
             browser.setValue(locator.password,'1');
             browser.click(locator.loginButton);
-            browser.pause(1000);
+            browser.waitForText(locator.errorMessage, 1000);
             let error = browser.getText(locator.errorMessage);
-            assert.equal(error, 'User with this email does not exist');
+            assert.equal(error, data.wrongLoginError);
         });
     });
 
