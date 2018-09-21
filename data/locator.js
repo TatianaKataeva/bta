@@ -78,6 +78,12 @@ module.exports = {
         bugTitle: 'span.text-left=Register button has wrong text',
         txtArea: '#str',
         registerButton: '#registration'
+    },
+
+    logout: {
+        loginButton: '#login',
+        bugReportForm: '#bug-form',
+        logoutButton: '#logout',
     }
 };
 
