@@ -40,7 +40,10 @@ module.exports = {
         actualResult: '#actual',
         expectedResult: '#expected',
         attachmentLink: '#attachment',
-        assigneeDropDown: '#assignee div.Dropdown-root'
+        assigneeDropDown: '#assignee div.Dropdown-root',
+        priorities: '#priority div.Dropdown-root',
+        severities: '#severity div.Dropdown-root'
+
     },
 
     navigationBar: {
