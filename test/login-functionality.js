@@ -1,6 +1,5 @@
 const assert = require('chai').assert;
 const locator = require('../data/locator').loginPage;
-const data = require('../data/test.data').loginFunctionality;
 const locator3 = require('../data/locator').registrationPage;
 const locator2 = require('../data/locator').newBugReportPage;
 const user = require('../data/test.data').user;
@@ -123,8 +122,8 @@ describe('Login Functionality', function () {
             browser.setValue(locator.email, user.email);
             browser.setValue(locator.password, user.password);
             browser.click(locator.loginButton);
-            browser.waitForVisible(locator2.newBugForm, 2000);
-            let isBugForm = browser.isExisting(locator2.newBugForm);
+            browser.waitForVisible(locator2.bugReportForm, 2000);
+            let isBugForm = browser.isExisting(locator2.bugReportForm);
             assert.isTrue(isBugForm, 'true', 'No "New Bug Report” page opened');
         });
     });

@@ -39,7 +39,12 @@ module.exports = {
         stepsToReproduce: '#str',
         actualResult: '#actual',
         expectedResult: '#expected',
-        attachmentLink: '#attachment'
+        attachmentLink: '#attachment',
+        assigneeDropDownPlaceHolder: '#assignee .Dropdown-placeholder',
+        priorityDropDownPlaceHolder: '#priority .Dropdown-placeholder',
+        severityDropDownPlaceHolder: '#severity .Dropdown-placeholder',
+        reproDropDownPlaceHolder: '#repro .Dropdown-placeholder',
+        versionDropDownPlaceHolder: '#version .Dropdown-placeholder'
     },
 
     navigationBar: {

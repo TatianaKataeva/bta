@@ -16,16 +16,6 @@ module.exports = {
         textAlign: "center"
     },
 
-    loginFunctionality: {
-        errorDesignBackgroundColor: 'rgba(248,215,218,1)',
-        errorDesignBorderColor: 'rgb(245,198,203)',
-        errorDesignFontFamily: 'segoe ui',
-        errorDesignFontSize: '16px',
-        errorDesignFontWeight: '400',
-        errorDesignTextAlign: 'center',
-        errorDesignFontColor: 'rgba(114,28,36,1)'
-    },
-
     loginPage: {
         emailPlaceholderText: "Email *",
         emailFieldFontSize: "16px",
@@ -47,7 +37,14 @@ module.exports = {
         noLoginOrPassError: 'Specify email and password',
         wrongLoginError: 'User with this email does not exist',
         wrongPasswordError: 'Password is incorrect',
-        oneChar: 'A'
+        oneChar: 'A',
+        errorDesignBackgroundColor: 'rgba(248,215,218,1)',
+        errorDesignBorderColor: 'rgb(245,198,203)',
+        errorDesignFontFamily: 'segoe ui',
+        errorDesignFontSize: '16px',
+        errorDesignFontWeight: '400',
+        errorDesignTextAlign: 'center',
+        errorDesignFontColor: 'rgba(114,28,36,1)'
     },
 
     bugReportFormDisabledState: {
@@ -128,7 +125,9 @@ module.exports = {
         fontSize: '16px',
         fontWeight: '400',
         fontColor: 'rgba(73,80,87,1)',
-        textAlign: 'start'
+        textAlign: 'start',
+        placeholder: ['Summary *','Steps to reproduce *','Actual result *','Expected result *','Attachment link',
+                      'Assignee *','Priority *','Severity *','Repro *','Version']
 
     }
 
