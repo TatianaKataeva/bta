@@ -163,3 +163,48 @@ describe('New bug report page', function () { //TODO: remove this describe. The 
         });
     });
 });
+describe('Element presence', function () {
+
+    function getActualPlcHolder(key){
+        return browser.getAttribute(locator.newBugReportPage[key], 'placeholder');
+    }
+
+    function getPlaceHolderText(anySelector){
+        return browser.getText(anySelector);
+    }
+
+    let arrExp=data.newBugReportPage.placeholder;
+    let arrLocator=['summaryField','stepsToReproduce','actualResult',
+                        'expectedResult','attachmentLink',
+        locator.newBugReportPage.assigneeDropDownPlaceHolder,
+        locator.newBugReportPage.priorityDropDownPlaceHolder,
+        locator.newBugReportPage.severityDropDownPlaceHolder,
+        locator.newBugReportPage.reproDropDownPlaceHolder,
+        locator.newBugReportPage.versionDropDownPlaceHolder];
+
+
+    for (let i=0; i<arrExp.length; i++){
+
+     it(`Presence of an element with ${arrExp[i]} placeholder`, function () {
+         let aPlaceHolder;
+            if (i < 5 ) {
+                aPlaceHolder = getActualPlcHolder(arrLocator[i]);
+            } else {
+                aPlaceHolder = getPlaceHolderText(arrLocator[i]);
+            }
+                assert.equal(aPlaceHolder, arrExp[i], `Placeholder : ${arrExp[i]} is not displayed`);
+     });
+     }
+
+});
+
+describe('Redirecting to the New Bug report page', function () {
+
+    it('Page opening from NavBar', function () {
+        browser.click(locator.navigationBar.allIssuesButton);
+        browser.click(locator.navigationBar.newBugButton);
+        let isPresent = browser.isExisting(locator.newBugReportPage.bugReportForm);
+        assert.isTrue(isPresent, 'true', 'User is not redirected to the New Bug report page')
+    })
+
+});
