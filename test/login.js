@@ -31,34 +31,35 @@ describe('Elements present', function () {
         assert.isTrue(registrationButton, 'Registration button is NOT Visible');
     });
 });
-    describe('Email field', function () {
 
-        it('Email field should be empty', function () {
+describe('Email field', function () {
+
+    it('Email field should be empty', function () {
         let emailFieldValue = browser.getValue(locator.email);
-        assert.equal(emailFieldValue,'', 'Email field is NOT empty');
-        });
+        assert.equal(emailFieldValue, '', 'Email field is NOT empty');
+    });
 
-        it('Email placeholder should be "Email *"', function () {
-            let emailFieldPlaceholder = browser.getAttribute(locator.email,'placeholder');
-            assert.equal(emailFieldPlaceholder,data.emailPlaceholderText, 'Email field placeholder is NOT correct');
-        });
-        it('Email field Font Size', function () {
+    it('Email placeholder should be "Email *"', function () {
+        let emailFieldPlaceholder = browser.getAttribute(locator.email, 'placeholder');
+        assert.equal(emailFieldPlaceholder, data.emailPlaceholderText, 'Email field placeholder is NOT correct');
+    });
+    it('Email field Font Size', function () {
         let fontSize = browser.getCssProperty(locator.email, 'font-size').value;
         assert.equal(fontSize, data.emailFieldFontSize, 'Email field Font Size is NOT correct');
-        });
+    });
 
-        it('Email field Font Weight', function () {
-            let fontWeight = browser.getCssProperty(locator.email, 'font-weight').value;
-            assert.equal(fontWeight, data.emailFieldFontWeight, 'Email field Font Weight is NOT correct');
-        });
+    it('Email field Font Weight', function () {
+        let fontWeight = browser.getCssProperty(locator.email, 'font-weight').value;
+        assert.equal(fontWeight, data.emailFieldFontWeight, 'Email field Font Weight is NOT correct');
+    });
 
-        it('Email field Font Family', function () {
-            let fontFamily = browser.getCssProperty(locator.email, 'font-family').value;
-            assert.equal(fontFamily, data.emailFieldFontFamily, 'Email field Font Family is NOT correct');
-        });
+    it('Email field Font Family', function () {
+        let fontFamily = browser.getCssProperty(locator.email, 'font-family').value;
+        assert.equal(fontFamily, data.emailFieldFontFamily, 'Email field Font Family is NOT correct');
+    });
 
-        it('Email field Font Color', function () {
-            let fontColor = browser.getCssProperty(locator.email, 'color').parsed.hex;
-            assert.equal(fontColor, data.emailFieldFontColor, 'Email field Font Color is NOT correct');
-        });
+    it('Email field Font Color', function () {
+        let fontColor = browser.getCssProperty(locator.email, 'color').parsed.hex;
+        assert.equal(fontColor, data.emailFieldFontColor, 'Email field Font Color is NOT correct');
+    });
 });
