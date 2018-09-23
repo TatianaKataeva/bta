@@ -94,6 +94,8 @@ bugList: {
         bugPriorityTitle: '#bug_priority',
         bugStatusTitle: '#bug_status',
         bugReporterTitle: '#bug_reporter',
-        titleTable: '.table thead p'
+        titleTable: '.table thead p',
+    fontfamilyTitle: '.font-segoe-ui'
+
     }
 };

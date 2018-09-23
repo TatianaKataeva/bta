@@ -65,5 +65,17 @@ describe('Bug List Page', function () {
             let titleColumnsFontWeight = titleColumns.getCssProperty('font-weight').value;
             assert.equal(titleColumnsFontWeight, data.fontWeightHeader, 'Titles Font-weight is incorrect')
         });
+
+        it(`All columns titles have Text-family ${data.fontFamilyHeader}`, function () {
+            let titleColumns = $(locator.bugList.fontfamilyTitle);
+            let titleColumnsFontFamily = titleColumns.getCssProperty('font-family').value;
+            assert.equal(titleColumnsFontFamily, data.fontFamilyHeader, 'Titles Font-family is incorrect')
+        });
+
+        it(`All columns titles have Text-color ${data.fontColorHeader}`, function () {
+            let titleColumns = $(locator.bugList.bodyTable);
+            let titleColumnsFontColor = titleColumns.getCssProperty('color').parsed.hex;
+            assert.equal(titleColumnsFontColor, data.fontColorHeader, 'Titles Font-color is incorrect')
+        });
     });
 });

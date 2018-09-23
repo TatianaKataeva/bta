@@ -137,7 +137,9 @@ module.exports = {
         bugReporterTitle: 'Reporter',
         textAlignHeader: 'center',
         fontSizeHeader: '16px',
-        fontWeightHeader: '700'
+        fontWeightHeader: '700',
+        fontFamilyHeader: 'segoe ui',
+        fontColorHeader: '#212529'
     }
 
 };
