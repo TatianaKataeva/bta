@@ -9,7 +9,7 @@ describe('bug-report-form-edit-mode', function () {
 
   describe('Bug report from Edit Mode', function () {
 
-    const staticValueDefault = [];
+    const staticValueDefault = []; // Array of static text values in Default state
 
     it(`Page has the same titles as in Default State`, function () {
 
@@ -25,12 +25,12 @@ describe('bug-report-form-edit-mode', function () {
 
       browser.waitForVisible(locator2.summary,20000);
 
-     const arrDefault = [];
+     const arrDefault = []; // Array of titles in Default state
       for (let i in $$('.text-bold')) {
         arrDefault.push($$('.text-bold')[i].getText());
       }
 
-
+      // ---------Start--------- Pushing static text values from Default state to Array
       for (let i in $$('#badge')) {
         staticValueDefault.push($$('#badge')[i].getText());
       }
@@ -46,12 +46,12 @@ describe('bug-report-form-edit-mode', function () {
       for (let i in $$('.text-gray')) {
         staticValueDefault.push($$('.text-gray')[i].getText());
       }
-
+        // ---------End---------
 
       browser.click(locator.btnEdit);
       browser.waitForVisible(locator2.summary,20000);
 
-      const arrEdit = [];
+      const arrEdit = []; // Array of titles in Edit Mode
       for (let i in $$('.text-bold')) {
         arrEdit.push($$('.text-bold')[i].getText());
       }
@@ -86,9 +86,17 @@ describe('bug-report-form-edit-mode', function () {
       assert.equal(statValDefCompired.sort().filter(word => word != '').join(', '), inputValueEdit.sort().join(', '), 'Static text in default state != Input values in Edit Mode');
     });
 
+
     it('reporter remains static', function () {
       let reporter = browser.getTagName(locator.reporter);
       assert.equal(reporter, data.tagSpan, 'reporter not static');
+    });
+
+
+    it(' Input fields, text area, and drop-down lists contain the values which provided during bug-report creation', function () {
+      $$('.Dropdown-control')[0].click();
+
+      assert.equal(reporter, data.tagSpan, 'Lists is not contain the values');
     });
   });
 
@@ -206,14 +214,53 @@ describe('bug-report-form-edit-mode', function () {
       let align = browser.getCssProperty(locator.inputActRes, 'text-align').value;
       assert.equal(align, data.textAlign, `text is not aligned to the ${data.textAlign}`)
     });
+  });
 
-        // for (let i in data.summaryArray) {
-        //     it(`Title - ${data.summaryArray[i]}`, function () {
-        //         let title = $$('.text-bold')[i].getText();
-        //         console.log(title);
-        //         assert.isTrue(true);
-        //     });
-        // }
 
+  describe('Expected Result', function () {
+
+    it('is a single line input field', function () {
+      let elType = browser.getTagName(locator.inputExpRes);
+      assert.equal(elType, data.tagInput, 'is not a single line input field');
     });
+
+
+    it(`font family is ${data.fontFamily}`, function () {
+      let fontFamily = browser.getCssProperty(locator.inputExpRes, 'font-family').value;
+      assert.equal(fontFamily, data.fontFamily, 'font family is incorrect');
+    });
+
+
+    it(`font size is ${data.fontSize}`, function () {
+      let fontSize = browser.getCssProperty(locator.inputExpRes, 'font-size').value;
+      assert.equal(fontSize, data.fontSize, 'font size is incorrect');
+    });
+
+
+    it(`font weight is ${data.fontWeight}`, function () {
+      let fontWeight = browser.getCssProperty(locator.inputExpRes, 'font-weight').value;
+      assert.equal(fontWeight, data.fontWeight, 'font weight is incorrect');
+    });
+
+
+    it(`font color is ${data.fontColor}`, function () {
+      let fontColor = browser.getCssProperty(locator.inputExpRes, 'color').value;
+      assert.equal(fontColor, data.fontColor, 'color is incorrect');
+    });
+
+
+    it(`text is aligned to the ${data.textAlign}`, function () {
+      let align = browser.getCssProperty(locator.inputExpRes, 'text-align').value;
+      assert.equal(align, data.textAlign, `text is not aligned to the ${data.textAlign}`)
+    });
+
+
+  });
 });
+// for (let i in data.summaryArray) {
+//     it(`Title - ${data.summaryArray[i]}`, function () {
+//         let title = $$('.text-bold')[i].getText();
+//         console.log(title);
+//         assert.isTrue(true);
+//     });
+// }

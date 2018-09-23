@@ -73,6 +73,7 @@ module.exports = {
   bugReportEditMode: {
     input: '#summary',
     inputActRes: '#actual',
+    inputExpRes: '#expected',
     btnAllIssues: '#all_issues',
     btnEdit: '#edit',
     bugTitle: '#status',
