@@ -91,13 +91,6 @@ describe('bug-report-form-edit-mode', function () {
       let reporter = browser.getTagName(locator.reporter);
       assert.equal(reporter, data.tagSpan, 'reporter not static');
     });
-
-
-    it(' Input fields, text area, and drop-down lists contain the values which provided during bug-report creation', function () {
-      $$('.Dropdown-control')[0].click();
-
-      assert.equal(reporter, data.tagSpan, 'Lists is not contain the values');
-    });
   });
 
 
@@ -253,8 +246,77 @@ describe('bug-report-form-edit-mode', function () {
       let align = browser.getCssProperty(locator.inputExpRes, 'text-align').value;
       assert.equal(align, data.textAlign, `text is not aligned to the ${data.textAlign}`)
     });
+  });
+
+  describe('Attachment', function () {
+
+    it('is a single line input field', function () {
+      let elType = browser.getTagName(locator.inputAtach);
+      assert.equal(elType, data.tagInput, 'is not a single line input field');
+    });
 
 
+    it(`font family is ${data.fontFamily}`, function () {
+      let fontFamily = browser.getCssProperty(locator.inputAtach, 'font-family').value;
+      assert.equal(fontFamily, data.fontFamily, 'font family is incorrect');
+    });
+
+
+    it(`font size is ${data.fontSize}`, function () {
+      let fontSize = browser.getCssProperty(locator.inputAtach, 'font-size').value;
+      assert.equal(fontSize, data.fontSize, 'font size is incorrect');
+    });
+
+
+    it(`font weight is ${data.fontWeight}`, function () {
+      let fontWeight = browser.getCssProperty(locator.inputAtach, 'font-weight').value;
+      assert.equal(fontWeight, data.fontWeight, 'font weight is incorrect');
+    });
+
+
+    it(`font color is ${data.fontColor}`, function () {
+      let fontColor = browser.getCssProperty(locator.inputAtach, 'color').value;
+      assert.equal(fontColor, data.fontColor, 'color is incorrect');
+    });
+
+
+    it(`text is aligned to the ${data.textAlign}`, function () {
+      let align = browser.getCssProperty(locator.inputAtach, 'text-align').value;
+      assert.equal(align, data.textAlign, `text is not aligned to the ${data.textAlign}`)
+    });
+  });
+
+
+  describe('Drop-Down lists', function () {
+
+    it(`font family is ${data.fontFamily}`, function () {
+      let fontFamily = $$('.Dropdown-control')[0].getCssProperty('font-family').value;
+      assert.equal(fontFamily, data.fontFamily, 'font family is incorrect');
+    });
+
+
+    it(`font size is ${data.fontSize}`, function () {
+      let fontSize = browser.getCssProperty(locator.inputAtach, 'font-size').value;
+      assert.equal(fontSize, data.fontSize, 'font size is incorrect');
+    });
+
+
+    it(`font weight is ${data.fontWeight}`, function () {
+      let fontWeight = browser.getCssProperty(locator.inputAtach, 'font-weight').value;
+      assert.equal(fontWeight, data.fontWeight, 'font weight is incorrect');
+    });
+
+
+    it(`font color is ${data.fontColor}`, function () {
+      let fontColor = browser.getCssProperty(locator.inputAtach, 'color').value;
+      assert.equal(fontColor, data.fontColor, 'color is incorrect');
+    });
+
+
+    it(`text is aligned to the ${data.textAlign}`, function () {
+      let align = browser.getCssProperty(locator.inputAtach, 'text-align').value;
+      assert.equal(align, data.textAlign, `text is not aligned to the ${data.textAlign}`)
+    });
   });
 });
 // for (let i in data.summaryArray) {

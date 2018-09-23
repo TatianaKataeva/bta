@@ -74,9 +74,10 @@ module.exports = {
     input: '#summary',
     inputActRes: '#actual',
     inputExpRes: '#expected',
+    inputAtach: '#attachment',
     btnAllIssues: '#all_issues',
     btnEdit: '#edit',
-    bugTitle: '#status',
+    bugTitle: '#bug',
     txtArea: '#str',
     reporter: '.text-gray'
   },
