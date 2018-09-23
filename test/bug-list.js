@@ -28,7 +28,7 @@ describe('Bug List Page', function () {
         assert.isTrue(bodyTableVisible, 'List of bugs NOT Visible');
     });
     });
-    describe('Bug list table Header', function () {
+    describe('Table Header', function () {
         it('Bug Summary title', function () {
             let bugSummaryTitle = browser.getText(locator.bugList.bugSummaryTitle);
             assert.equal(bugSummaryTitle, data.bugSummaryTitle, 'Bug Summary title is incorrect')
@@ -49,14 +49,19 @@ describe('Bug List Page', function () {
             assert.equal(bugReporterTitle, data.bugReporterTitle, 'Bug Reporter title is incorrect')
         });
 
-        it(`All columns titles have Text align ${data.textAlignHeader}`, function () {
-            let textAlign = browser.getCssProperty(locator.bugList.headerTable, 'text-align').value;
-            assert.equal(textAlign, data.textAlignHeader, 'Titles Text-align is incorrect')
-        });
+        // it(`All columns titles have Text align ${data.textAlignHeader}`, function () {
+        //     let textAlign = browser.getCssProperty(locator.bugList.headerTable, 'text-align').value;
+        //     assert.equal(textAlign, data.textAlignHeader, 'Titles Text-align is incorrect')
+        // });
 
-        it(`All columns titles have Text-size ${data.fontSize}`, function () {
+        it(`All columns titles have Text-size ${data.fontSizeHeader}`, function () {
             let fontSize = browser.getCssProperty(locator.bugList.headerTable, 'font-size').value;
             assert.equal(fontSize, data.fontSizeHeader, 'Titles Font-size is incorrect')
+        });
+
+        it(`All columns titles have Text-weight ${data.fontWeightHeader}`, function () {
+            let fontWeight = browser.getCssProperty(locator.bugList.headerTable, 'font-weight').value;
+            assert.equal(fontWeight, data.fontWeightHeader, 'Titles Font-weight is incorrect')
         });
     });
 });

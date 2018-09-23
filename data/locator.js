@@ -43,13 +43,15 @@ module.exports = {
     },
 
     bugList: {
-        bodyBugList: '.container .table',
+        bodyBugList: '#bug_list_page',
         headerTable: 'thead',
         bodyTable: 'tbody tr',
-        bugSummaryTitle: 'thead th:nth-child(1)',
-        bugPriorityTitle: 'thead th:nth-child(2)',
-        bugStatusTitle: 'thead th:nth-child(3)',
-        bugReporterTitle: 'thead th:nth-child(4)',
+        bugSummaryTitle: '#bug_summary',
+        bugPriorityTitle: '#bug_priority',
+        bugStatusTitle: '#bug_status',
+        bugReporterTitle: '#bug_reporter',
+        titleTable: 'th'
+
 
     }
 };

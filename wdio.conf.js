@@ -6,7 +6,7 @@ exports.config = {
     // './test/login-functionality.js',
     // './test/registration-functionality.js',
     // './test/global-footer.js',
-      './test/bug-list.js'
+     './test/bug-list.js'
   ],
 
   exclude: [
