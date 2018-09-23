@@ -94,6 +94,6 @@ bugList: {
         bugPriorityTitle: '#bug_priority',
         bugStatusTitle: '#bug_status',
         bugReporterTitle: '#bug_reporter',
-        titleTable: 'th'
+        titleTable: '.table thead p'
     }
 };

@@ -137,7 +137,7 @@ module.exports = {
         bugReporterTitle: 'Reporter',
         textAlignHeader: 'center',
         fontSizeHeader: '16px',
-        fontWeightHeader: 'bold'
+        fontWeightHeader: '700'
     }
 
 };

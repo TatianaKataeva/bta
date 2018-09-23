@@ -49,10 +49,11 @@ describe('Bug List Page', function () {
             assert.equal(bugReporterTitle, data.bugReporterTitle, 'Bug Reporter title is incorrect')
         });
 
-        // it(`All columns titles have Text align ${data.textAlignHeader}`, function () {
-        //     let textAlign = browser.getCssProperty(locator.bugList.headerTable, 'text-align').value;
-        //     assert.equal(textAlign, data.textAlignHeader, 'Titles Text-align is incorrect')
-        // });
+        it(`All columns titles have Text align ${data.textAlignHeader}`, function () {
+            let titleColumns = $(locator.bugList.titleTable);
+            let titleColumnsTextAlign = titleColumns.getCssProperty('text-align').value;
+            assert.equal(titleColumnsTextAlign, data.textAlignHeader, 'Titles Text-align is incorrect')
+        });
 
         it(`All columns titles have Text-size ${data.fontSizeHeader}`, function () {
             let fontSize = browser.getCssProperty(locator.bugList.headerTable, 'font-size').value;
@@ -60,8 +61,9 @@ describe('Bug List Page', function () {
         });
 
         it(`All columns titles have Text-weight ${data.fontWeightHeader}`, function () {
-            let fontWeight = browser.getCssProperty(locator.bugList.headerTable, 'font-weight').value;
-            assert.equal(fontWeight, data.fontWeightHeader, 'Titles Font-weight is incorrect')
+            let titleColumns = $(locator.bugList.titleTable);
+            let titleColumnsFontWeight = titleColumns.getCssProperty('font-weight').value;
+            assert.equal(titleColumnsFontWeight, data.fontWeightHeader, 'Titles Font-weight is incorrect')
         });
     });
 });
