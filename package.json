@@ -26,5 +26,7 @@
     "wdio-spec-reporter": "^0.1.5",
     "webdriverio": "^4.13.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "npm": "^6.4.1"
+  }
 }
