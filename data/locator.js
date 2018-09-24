@@ -33,7 +33,7 @@ module.exports = {
     logoutButton: '#logout',
     navigetionBar: '[class="card-footer text-center mb-3"] .input-group-append',
     cardFooter: '.card-footer',
-    submitButton: '#todo_add'
+    submitButton: '#bug_add'
   },
   
 };
