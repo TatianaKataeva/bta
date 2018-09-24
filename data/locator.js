@@ -17,8 +17,21 @@ module.exports = {
     email: '#email',
     password: '#pass',
     loginButton: '#login',
-    errorMessage: '.alert-danger'
+    errorMessage: '.alert-danger',
+    registrationButton: '#registration'
   },
+
+  registrationPage : {
+    firstName: '#fname',
+    lastName: '#lname',
+    errorMessage: '.alert-danger',
+    registerButton: '#registration'
+  },
+
+    globalFooter: {
+        footer: '.custom-footer',
+        footerText: 'body .custom-footer',
+    },
 
   bugReportFormDisabledState: {
     titleFont: '.text-bold=Summary:',
@@ -29,6 +42,4 @@ module.exports = {
     allIssues: '#all_issues',
     bugSummary: 'tbody span'
   }
-
 };
-

@@ -4,6 +4,8 @@ exports.config = {
     './test/client.js',
     './test/global-header.js',
     './test/login-functionality.js',
+    './test/registration-functionality.js',
+    './test/global-footer.js',
     './test/bug-report-form-disabled-state.js'
   ],
 
