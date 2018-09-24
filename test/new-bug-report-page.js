@@ -204,3 +204,33 @@ describe('Redirecting to the New Bug report page', function () {
     })
 
 });
+
+describe('Expected result field', function () {
+
+  it(`Font family should be ${data.newBugReportPage.fontFamily}`, function () {
+    let fontFamily = browser.getCssProperty(locator.newBugReportPage.reproDropDownPlaceHolder, 'font-family');
+    assert.equal(fontFamily.value, data.newBugReportPage.fontFamily);
+
+  });
+
+  it(`Font size should be ${data.newBugReportPage.fontSize}`, function () {
+    let fontSize = browser.getCssProperty(locator.newBugReportPage.reproDropDownPlaceHolder, 'font-size');
+    assert.equal(fontSize.value, data.newBugReportPage.fontSize);
+  });
+
+  it(`Font weight should be ${data.newBugReportPage.fontWeight}`, function () {
+    let fontWeight = browser.getCssProperty(locator.newBugReportPage.reproDropDownPlaceHolder, 'font-weight');
+    assert.equal(fontWeight.value, data.newBugReportPage.fontWeight);
+  });
+
+  it(`Font color should be ${data.newBugReportPage.fontColor}`, function () {
+    let fontColor = browser.getCssProperty(locator.newBugReportPage.reproDropDownPlaceHolder, 'color');
+    assert.equal(fontColor.value, data.newBugReportPage.fontColor);
+  });
+
+  it(`Text align should be ${data.newBugReportPage.textAlign}`, function () {
+    let textAlign = browser.getCssProperty(locator.newBugReportPage.reproDropDownPlaceHolder, 'text-align');
+    assert.equal(textAlign.value, data.newBugReportPage.textAlign1);
+  });
+
+});

@@ -126,6 +126,7 @@ module.exports = {
         fontWeight: '400',
         fontColor: 'rgba(73,80,87,1)',
         textAlign: 'start',
+        textAlign1: 'left',
         placeholder: ['Summary *','Steps to reproduce *','Actual result *','Expected result *','Attachment link',
                       'Assignee *','Priority *','Severity *','Repro *','Version']
 
