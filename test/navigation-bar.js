@@ -5,10 +5,10 @@ const nav_bar = require('../data/locator').navigationBar;
 const nav_bar_data = require('../data/test.data').navigationBarFunctionality;
 
 
-
 describe('Navigation Bur Functionality', function () {
-    
+
     describe('Login To Product', function () {
+
         it('User should login to Product', function () {
             browser.url('/');
             browser.waitForVisible(locator.email, 7000);
