@@ -125,6 +125,7 @@ module.exports = {
         fontSize: '16px',
         fontWeight: '400',
         fontColor: 'rgba(73,80,87,1)',
+        fontColorRf: 'rgba(33,37,41,1)',
         textAlign: 'start',
         textAlign1: 'left',
         placeholder: ['Summary *','Steps to reproduce *','Actual result *','Expected result *','Attachment link',

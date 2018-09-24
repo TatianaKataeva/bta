@@ -44,7 +44,8 @@ module.exports = {
         priorityDropDownPlaceHolder: '#priority .Dropdown-placeholder',
         severityDropDownPlaceHolder: '#severity .Dropdown-placeholder',
         reproDropDownPlaceHolder: '#repro .Dropdown-placeholder',
-        versionDropDownPlaceHolder: '#version .Dropdown-placeholder'
+        versionDropDownPlaceHolder: '#version .Dropdown-placeholder',
+        requiredFieldText: '.text-sm-left'
     },
 
     navigationBar: {
