@@ -108,7 +108,9 @@ module.exports = {
         navBarFontWeight: "400",
         navBarButtonsFontColor: "rgba(255,255,255,1)",
         BackgroundColor1: "rgba(23,162,184,1)",
-        BackgroundColor2: "rgba(108,117,125,1)"
+        BackgroundColor2: "rgba(108,117,125,1)",
+        HoverBackgroundColor1: "rgba(19,132,150,1)",
+        HoverBackgroundColor2: "rgba(90,98,104,1)"
     },
 
     globalFooter: {

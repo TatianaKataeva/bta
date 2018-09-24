@@ -46,23 +46,15 @@ module.exports = {
         reproDropDownPlaceHolder: '#repro .Dropdown-placeholder',
         versionDropDownPlaceHolder: '#version .Dropdown-placeholder'
     },
-
-  navigationBar : {
-    newBugButton: '#new_bug',
-    allIssuesButton: '#all_issues',
-    logoutButton: '#logout',
-    navigetionBar: '[class="card-footer text-center mb-3"] .input-group-append',
-    cardFooter: '.card-footer',
-    submitButton: '#bug_add'
-  },
-  
+    
     navigationBar: {
         newBugButton: '#new_bug',
         allIssuesButton: '#all_issues',
         logoutButton: '#logout',
         navigetionBar: '[class="card-footer text-center mb-3"] .input-group-append',
         cardFooter: '.card-footer',
-        submitButton: '#todo_add'
+        submitButton: '#bug_add',
+        issuesTable: '.table'
     },
 
     globalFooter: {
