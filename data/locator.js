@@ -56,6 +56,10 @@ module.exports = {
     allIssuesBtn: '#all_issues',
     btn: '.btn-primary.btn-block',
     bugTitle: 'span.text-left=Register button has wrong text',
-    txtArea: '#str'
+    txtArea: '#str',
+    addComment: '.clearfix.mt-4 textarea',
+      addButton: '#add_comment',
+      testTitle: 'span.text-left=Test bug page. Please do not delete!',
+      commentText: '#comment'
   }
 };

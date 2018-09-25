@@ -85,8 +85,30 @@ module.exports = {
     fontWeight: "400",
     fontFamily: "segoe ui",
     fontColor: "#212529"
-  }
+  },
 
+  comments: {
+    fontFamily: "segoe ui",
+    fontSize: "16px",
+    fontWeight: "400",
+    fontColor: "rgba(73,80,87,1)",
+    textAlign: "start",
+    width: "100%",
+    backgroundColor: "rgba(255,255,255,1)",
+    borderColor: "rgb(206,212,218)",
+    placeholder: "Add comment",
+    addButton: {
+         buttonAlign: 'right',
+         backgroundColor: 'rgba(0,123,255,1)',
+         fontFamily: 'segoe ui',
+         fontSize: '16px',
+         fontWeight: '400',
+         fontColor: 'rgba(255,255,255,1)',
+         textAlign: 'center',
+         hover: '#0069d9'
+      }
+
+  }
 };
 
 
