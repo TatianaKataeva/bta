@@ -4,13 +4,14 @@ exports.config = {
     './test/client.js',
     './test/global-header.js',
     './test/login-functionality.js',
-    './test/login.js',
     './test/bug-report-form-edit-mode.js',
     './test/registration-functionality.js',
     './test/navigation-bar.js',
     './test/global-footer.js',
     './test/new-bug-report-page.js',
-    './test/bug-report-form-disabled-state.js'
+    './test/bug-report-form-disabled-state.js',
+    './test/login.js'
+    './test/comments.js'
   ],
 
   exclude: [

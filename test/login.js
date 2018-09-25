@@ -2,6 +2,50 @@ const assert = require('chai').assert;
 const data = require('../data/test.data').loginPage;
 const locator = require('../data/locator').loginPage;
 
+describe('Login button', function () {
+
+    it('Login button is visible', function () {
+        browser.url('/');
+        browser.waitForVisible(locator.loginButton);
+        let loginButton = browser.isVisible(locator.loginButton);
+        assert.isTrue(loginButton, 'Login button is NOT Visible');
+    });
+
+    it('Login button Font Size', function () {
+        let fontSize = browser.getCssProperty(locator.loginButton, 'font-size').value;
+        assert.equal(fontSize, data.loginButtonFontSize, 'Login Button Font Size is NOT correct');
+    });
+
+    it('Login button Font Weight', function () {
+        let fontWeight = browser.getCssProperty(locator.loginButton, 'font-weight').value;
+        assert.equal(fontWeight, data.loginButtonFontWeight, 'Login Button Font Weight is NOT correct');
+    });
+
+    it('Login button Font Family', function () {
+        let fontFamily = browser.getCssProperty(locator.loginButton, 'font-family').value;
+        assert.equal(fontFamily, data.loginButtonFontFamily, 'Login Button Font Family is NOT correct');
+    });
+
+    it('Login button Font Color', function () {
+        let fontColor = browser.getCssProperty(locator.loginButton, 'color').parsed.hex;
+        assert.equal(fontColor, data.loginButtonFontColor, 'Login Button Font Color is NOT correct');
+    });
+
+    it('Login button Color', function () {
+        let Color = browser.getCssProperty(locator.loginButton, 'background-color').parsed.hex;
+        assert.equal(Color, data.loginButtonColor, 'Login Button Color is NOT correct');
+    });
+
+    it('Login button Hover Color', function () {
+        browser.moveToObject(locator.loginButton);
+        browser.pause(3000);
+        let HoverColor = browser.getCssProperty(locator.loginButton, 'background-color').parsed.hex;
+        assert.equal(HoverColor, data.loginButtonFocusColor, 'Login Button Hover Color is NOT correct');
+    });
+
+    
+});
+
 describe('Elements present', function () {
 
     it('Email field is visible', function () {

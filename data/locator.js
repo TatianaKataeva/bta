@@ -83,6 +83,22 @@ module.exports = {
         bugTitle: 'span.text-left=Register button has wrong text',
         txtArea: '#str',
         registerButton: '#registration'
+    },
+
+    commentsModule: {
+        input: '#summary',
+        inputActRes: '#actual',
+        allIssuesBtn: '#all_issues',
+        btn: '.btn-primary.btn-block',
+        btnAdd: '.btn.mt-2',
+        bugTitle: 'span.text-left=Register button has wrong text',
+        txtArea: '#str',
+        commentsTitle: '#comments_title',
+        registerButton: '#registration',
+        newCommentsTextArea: '#new_comment',
+        comments: '#comments'
+
     }
 };
+
 

@@ -22,7 +22,19 @@ module.exports = {
         emailFieldFontWeight: "400",
         emailFieldFontFamily: "segoe ui",
         emailFieldFontColor: "#495057",
-        emailFieldFocusColor: "#80bdff"
+        emailFieldFocusColor: "#80bdff",
+        
+        loginButtonFontSize: "16px",
+        loginButtonFontWeight: "400",
+        loginButtonFontFamily: "segoe ui",
+        loginButtonFontColor: "#ffffff",
+        loginButtonColor: "#17a2b8",
+
+        loginButtonFocusColor: "#138496" //hover background-color
+
+        //Verify that login button with text “Login”, middle-left aligned
+
+
     },
 
     user: {
@@ -129,6 +141,16 @@ module.exports = {
         placeholder: ['Summary *','Steps to reproduce *','Actual result *','Expected result *','Attachment link',
                       'Assignee *','Priority *','Severity *','Repro *','Version']
 
+    },
+
+        commentsModule: {
+        fontFamily: 'segoe ui',
+        fontSize: '16px',
+        fontWeight: '400',
+        titleFontWeight: '700',
+        fontColor: '#212529',
+        textAlign: 'left',
+        commTitle: 'Comments:'
     }
 
 };
