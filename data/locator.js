@@ -86,8 +86,8 @@ module.exports = {
 
     },
 
-bugList: {
-    bodyBugList: '#bug_list_page',
+    bugList: {
+        bodyBugList: '#bug_list_page',
         headerTable: 'thead',
         bodyTable: 'tbody tr',
         bugSummaryTitle: '#bug_summary',
@@ -95,7 +95,11 @@ bugList: {
         bugStatusTitle: '#bug_status',
         bugReporterTitle: '#bug_reporter',
         titleTable: '.table thead p',
-    fontfamilyTitle: '.font-segoe-ui'
+        fontfamilyTitle: '.font-segoe-ui',
+        textSummary: '.btn-link',
+        textPriority: 'tbody #priority',
+        textStatus: 'tbody #status',
+        textReporter: 'tbody #reporter'
 
     }
 };
