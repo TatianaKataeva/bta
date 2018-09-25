@@ -8,21 +8,21 @@ describe('bug-report-form-edit-mode-comments', function () {
 
         it(`Verify that Font Family is ${data.fontFamily}`, function () {
             browser.url('/');
-            browser.waitForVisible(locator.loginPage.email, 5000);
+            browser.waitForVisible(locator.loginPage.email, 2000);
             browser.setValue(locator.loginPage.email, 'tester@test.com');
             browser.setValue(locator.loginPage.password, 'test');
             browser.click(locator.loginPage.loginButton);
-            browser.waitForVisible(locator.bugReportEditMode.allIssuesBtn, 5000);
+            browser.waitForVisible(locator.bugReportEditMode.allIssuesBtn, 2000);
             browser.click(locator.bugReportEditMode.allIssuesBtn);
-            browser.waitForVisible(locator.bugReportEditMode.testTitle, 5000);
+            browser.waitForVisible(locator.bugReportEditMode.testTitle, 2000);
             browser.click(locator.bugReportEditMode.testTitle);
             let fontFamily = browser.getCssProperty(locator.bugReportEditMode.addComment, 'font-family');
             assert.equal(fontFamily.value, data.fontFamily, 'Font family is incorrect');
         });
 
-        it(`Verify that Font Size is ${data.fontSize}`, function (){
-        let fontSize = browser.getCssProperty(locator.bugReportEditMode.addComment, 'font-size');
-        assert.equal(fontSize.value, data.fontSize, 'Font size is incorrect');
+        it(`Verify that Font Size is ${data.fontSize}`, function () {
+            let fontSize = browser.getCssProperty(locator.bugReportEditMode.addComment, 'font-size');
+            assert.equal(fontSize.value, data.fontSize, 'Font size is incorrect');
         });
 
         it(`Verify that Font Weight is ${data.fontWeight}`, function () {
@@ -30,13 +30,13 @@ describe('bug-report-form-edit-mode-comments', function () {
             assert.equal(fontWeight.value, data.fontWeight, 'Font weight is incorrect');
         });
 
-         it(`Verify that Font Color is ${data.fontColor}`, function () {
+        it(`Verify that Font Color is ${data.fontColor}`, function () {
             let fontColor = browser.getCssProperty(locator.bugReportEditMode.addComment, 'color');
             assert.equal(fontColor.value, data.fontColor, 'Font color is incorrect');
-         });
+        });
 
         it(`Verify that text aligned to the ${data.textAlign}`, function () {
-            let textAlign=browser.getCssProperty(locator.bugReportEditMode.addComment, 'text-align');
+            let textAlign = browser.getCssProperty(locator.bugReportEditMode.addComment, 'text-align');
             assert.equal(textAlign.value, data.textAlign, `Text is not aligned to the ${data.textAlign}`);
         });
 
@@ -68,7 +68,7 @@ describe('bug-report-form-edit-mode-comments', function () {
             let buttonAlign = browser.getCssProperty(locator.bugReportEditMode.addButton, 'float');
             assert.equal(buttonAlign.value, data.addButton.buttonAlign, `Button is not aligned to ${data.addButton.buttonAlign}`);
         });
-        it(`Verify that background color is ${data.addButton.backgroundColor}`, function() {
+        it(`Verify that background color is ${data.addButton.backgroundColor}`, function () {
             let backgroundColor = browser.getCssProperty(locator.bugReportEditMode.addButton, 'background-color');
             assert.equal(backgroundColor.value, data.addButton.backgroundColor, 'Background color is incorrect');
         });
@@ -92,27 +92,28 @@ describe('bug-report-form-edit-mode-comments', function () {
             let textAlign = browser.getCssProperty(locator.bugReportEditMode.addButton, 'text-align');
             assert.equal(textAlign.value, data.addButton.textAlign, `Text is not align to  ${data.addButton.textAlign}`);
         });
-        it(`Login button Hover Color is ${data.addButton.hover}`, function () {
-            browser.moveToObject(locator.bugReportEditMode.addButton);
-            browser.pause(3000);
-            let HoverColor = browser.getCssProperty(locator.bugReportEditMode.addButton, 'background-color').parsed.hex;
-            assert.equal(HoverColor, data.addButton.hover, 'Login Button Hover Color is NOT correct');
-        });
         it(`Verify that new comment added on the bottom`, function () {
-            // let commentText = browser.getValue(locator.bugReportEditMode.commentText, 'text');
-            // let lastComment = commentText[commentText.length - 1];
-            let randomComment = Math.floor(Math.random() * 1000)+Math.floor(Math.random() * 1000);
+            let randomComment = Math.floor(Math.random() * 10000);
             browser.setValue(locator.bugReportEditMode.addComment, randomComment);
-            browser.waitForVisible(locator.bugReportEditMode.addButton, 2000);
             browser.click(locator.bugReportEditMode.addButton);
-            let commentNew = browser.getValue(locator.bugReportEditMode.commentText, 'text');
-            assert.equal(commentNew[commentNew.length - 1], randomComment, `The comment was successfully added`);
-            console.log(commentNew[commentNew.length - 1], randomComment);
+            let ver = randomComment.toString();
+            browser.pause(1000);
+            let lastComment = browser.getText(locator.bugReportEditMode.commentText);
+            assert.equal(lastComment[lastComment.length-1], ver, 'Error matherfucker!')
         });
         it(`Verify that after new comment adding the Add Comment field is empty`, function () {
             browser.waitForVisible(locator.bugReportEditMode.addComment, 2000);
             let placeholderCheck = browser.getAttribute(locator.bugReportEditMode.addComment, 'placeholder');
             assert.equal(placeholderCheck, data.placeholder, `The Add comment field is empty`);
+        });
+        it(`Verify that empty comment can be added`, function () {
+            let emp = '';
+            browser.setValue(locator.bugReportEditMode.addComment, emp);
+            browser.click(locator.bugReportEditMode.addButton);
+            browser.pause(1000);
+            let emptyMessage = browser.getText(locator.bugReportEditMode.commentText);
+            browser.pause(1000);
+            assert.equal(emptyMessage[emptyMessage.length-1], emp, `The empty comment wasn't added`);
         });
     });
 });

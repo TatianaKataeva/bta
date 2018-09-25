@@ -107,7 +107,6 @@ module.exports = {
          textAlign: 'center',
          hover: '#0069d9'
       }
-
   }
 };
 
