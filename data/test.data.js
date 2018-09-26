@@ -129,8 +129,12 @@ module.exports = {
         placeholder: ['Summary *','Steps to reproduce *','Actual result *','Expected result *','Attachment link',
                       'Assignee *','Priority *','Severity *','Repro *','Version']
 
-    }
+    },
 
+    controlBarFunctionality: {
+        editButtonName: 'Edit',
+        submitButtonName: 'Submit'
+    }
 };
 
 

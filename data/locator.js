@@ -83,6 +83,23 @@ module.exports = {
         bugTitle: 'span.text-left=Register button has wrong text',
         txtArea: '#str',
         registerButton: '#registration'
+    },
+
+    controlBarFunctionality: {
+        bugReportFormDisabled: '#bug_report_disabled',
+        bugReportFormEdit: '#edit-mode-form',
+        controlBar: '#edit-mode-form',
+        cancelBtnDis: '#cancel',
+        cancelBtnEdit: '#cancel_edit',
+        editBtn: '#edit',
+        submitBtn: '#submit',
+        anyInput: 'input',
+        anyDropDown: '#edit-mode-form .Dropdown-control',
+        anyDropInControlBar: 'tbody .Dropdown-control',
+        textAreaDis: '#str_value',
+        textAreaEdt: '#str',
+        bugSummary: '#summary',
+        badgeDropDownEdt: '#edit-mode-form tbody .Dropdown-control'
     }
 };
 
