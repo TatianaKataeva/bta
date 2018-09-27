@@ -11,6 +11,12 @@ describe('Login button', function () {
         assert.isTrue(loginButton, 'Login button is NOT Visible');
     });
 
+    it('Login button alignment', function () {
+       let loginButtonAlign = browser.getCssProperty(locator.loginButton,"vertical-align").value;
+       console.log(loginButtonAlign);
+        assert.equal(loginButtonAlign, "middle", 'Login Button align is NOT correct');
+    });
+
     it('Login button Font Size', function () {
         let fontSize = browser.getCssProperty(locator.loginButton, 'font-size').value;
         assert.equal(fontSize, data.loginButtonFontSize, 'Login Button Font Size is NOT correct');

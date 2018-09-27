@@ -10,7 +10,7 @@ exports.config = {
     './test/global-footer.js',
     './test/new-bug-report-page.js',
     './test/bug-report-form-disabled-state.js',
-    './test/login.js'
+    './test/login.js',
     './test/comments.js'
   ],
 

@@ -150,7 +150,8 @@ module.exports = {
         titleFontWeight: '700',
         fontColor: '#212529',
         textAlign: 'left',
-        commTitle: 'Comments:'
+        commTitle: 'Comments:',
+        noCommentsTitle: 'No comments'
     }
 
 };

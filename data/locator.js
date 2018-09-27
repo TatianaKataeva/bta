@@ -96,7 +96,9 @@ module.exports = {
         commentsTitle: '#comments_title',
         registerButton: '#registration',
         newCommentsTextArea: '#new_comment',
-        comments: '#comments'
+        comments: '#comments',
+        noComments: '#no_comments',
+        bugTitleEmpty: 'span.text-left=Test. Empty comments bug report.'
 
     }
 };

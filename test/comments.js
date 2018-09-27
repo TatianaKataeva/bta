@@ -7,6 +7,7 @@ const font_weight = require('../data/test.data').commentsModule.titleFontWeight;
 const font_family = require('../data/test.data').commentsModule.fontFamily;
 const font_color = require('../data/test.data').commentsModule.fontColor;
 const text_align = require('../data/test.data').commentsModule.textAlign;
+const no_comm_titles = require('../data/test.data').commentsModule.noCommentsTitle;
 
 describe('Module Comments', function () {
 
@@ -27,7 +28,7 @@ describe('Module Comments', function () {
         assert.isTrue(btnAdd, 'Button Add is NOT Visible');
         });
 
-        it('Comments Module has Add button', function () {
+        it('Comments Module has title ${dada.commentsModule.commentsTitle}', function () {
         let commentsTitle = browser.getText(locator.commentsModule.commentsTitle);
         assert.equal(commentsTitle, comm_titles, 'Wrong comments title');
         });
@@ -37,10 +38,20 @@ describe('Module Comments', function () {
         assert.isTrue(newComment, 'New comment text field is NOT Visible');
         });
 
+        it(`Verify that module has List of comments`, function () {
+            let listOfComments = $$("#comment");
+            assert.notEqual(listOfComments.length, 1, 'No list of comments')
+        });
 });
 
 describe('Title', function () {
 
+    
+    it('Title is static text', function () {
+        let titleTag = browser.getTagName(locator.commentsModule.commentsTitle);
+        assert.equal(titleTag, "p", 'Title Font Size is NOT correct');
+    });
+
     it('Title Font Size', function () {
         let fontSize = browser.getCssProperty(locator.commentsModule.commentsTitle, 'font-size').value;
         assert.equal(fontSize, font_size, 'Title Font Size is NOT correct');
@@ -68,9 +79,12 @@ describe('Title', function () {
 
 });
 
-/*describe('List of comments (empty)', function () {
+describe('List of comments (empty)', function () {
 
     it('Title Font Size', function () {
+        browser.click(locator.commentsModule.allIssuesBtn);
+        browser.waitForVisible(locator.commentsModule.bugTitleEmpty, 2000);
+        browser.click(locator.commentsModule.bugTitleEmpty);
         let fontSize = browser.getCssProperty(locator.commentsModule.commentsTitle, 'font-size').value;
         assert.equal(fontSize, font_size, 'Title Font Size is NOT correct');
     });
@@ -95,4 +109,9 @@ describe('Title', function () {
         assert.equal(Align, text_align, 'Title Color is NOT correct');
     });
 
-});*/
+    it('Comments Module has sighn under title ${dada.commentsModule.noComments}', function () {
+        let commentsUnderTitle = browser.getText(locator.commentsModule.noComments);
+        assert.equal(commentsUnderTitle, no_comm_titles, 'Wrong under comments title');
+    });
+
+});
