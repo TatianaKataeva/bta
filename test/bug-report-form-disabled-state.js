@@ -34,6 +34,12 @@ describe(`Titles`, function () {
         let color = browser.getCssProperty(locator.titleFont, 'color').value;
         assert.equal(color, data.fontColor, 'Bug report form font color is incorrect');
     });
+
+    it('Values are displayed as a static text', function () {
+        let tagName = browser.getTagName(locator.valueFont);
+        console.log(tagName);
+        assert.equal(tagName, 'span', 'Values are not displayed as a static text');
+    });
 });
 
 
