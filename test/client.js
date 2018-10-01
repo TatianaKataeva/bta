@@ -9,7 +9,6 @@ describe(`Client`, function () {
 
   it('Page Title', function () {
     browser.url('/');
-    //browser.setViewportSize(viewport[i]);
     let title = browser.getTitle();
     assert.equal(title, data.pageTitle, 'Title is incorrect');
   });

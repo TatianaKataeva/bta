@@ -1,9 +1,7 @@
 exports.config = {
 
   specs: [
-    './test/client.js',
-    './test/global-header.js',
-    './test/login-functionality.js'
+      './test/registration.js'
   ],
 
   exclude: [
@@ -47,7 +45,7 @@ exports.config = {
 
   baseUrl: 'https://reactbugtracker.com/',
 
-  waitforTimeout: 10000,
+  waitforTimeout: 20000,
 
   connectionRetryTimeout: 90000,
 

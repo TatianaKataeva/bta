@@ -4,21 +4,20 @@
   "description": "Install the latest Node.js from https://nodejs.org/en/ ### 1.2. Git: Install the latest Git from  https://git-scm.com/ ## 2. Creating project ### 2.1. Create project folder: Open terminal and navigate to desired folder where you're going to store all of your projects. For example `projects` folder: ```` cd projects/ ```` Create a folder for automation project. For example, `automation-webdriverio`: ```` mkdir automation-webdriverio ```` And navigate to the created folder: ```` cd automation-webdriverio ```` ### 2.2. Install webDriver I/O and Selenium: ````  npm i --save-dev webdriverio selenium-standalone ````",
   "main": "index.js",
   "scripts": {
-    "test": "rm -rf reports mochawesome-report errorShots && wdio wdio.conf.js",
+    "test": "wdio wdio.conf.js",
     "report": "marge ./reports/wdiomochawesome.json --reportTitle 'Test Results'"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/artsenius/automation-webdriverio.git"
   },
-  "author": "Arthur Senko",
+  "author": "Maksim Kudrautsau",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/artsenius/automation-webdriverio/issues"
   },
   "homepage": "https://github.com/artsenius/automation-webdriverio#readme",
   "devDependencies": {
-    "chai": "^4.1.2",
     "mochawesome-report-generator": "^3.1.3",
     "wdio-mocha-framework": "^0.6.2",
     "wdio-mochawesome-reporter": "^2.0.1",
@@ -26,5 +25,8 @@
     "wdio-spec-reporter": "^0.1.5",
     "webdriverio": "^4.13.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "chai": "^4.1.2",
+    "npm": "^6.4.1"
+  }
 }
